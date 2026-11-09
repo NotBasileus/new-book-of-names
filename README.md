@@ -21,6 +21,11 @@ family names and places:
 You can add your own; a plain list of names is enough. It is free software
 (see "License").
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/interface-dark.png">
+  <img alt="The interface making Old Irish names: the style's names on the left, its settings in the middle, and new full names such as Maelruad Ua Finnachain on the right, with how the first was built." src="screenshots/interface-light.png">
+</picture>
+
 ## Getting started on Windows
 
 1. On the project's GitHub page, open **Releases** and download
