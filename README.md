@@ -279,6 +279,7 @@ Tests that need files not present in your copy are skipped.
   Markov chains.
 - The names in the bundled styles were gathered from the sources each
   style's description names, such as Wikidata, UESP and Memory Beta.
+- Vibecoded with Claude, using Claude Code.
 
 ## License
 
