@@ -1,0 +1,1192 @@
+# A namebook style: example names, and any settings pinned for them.
+
+title = "Sindarin"
+description = "Sindarin, the Grey-elven tongue of Tolkien's Middle-earth: names of Elves and Men and their places, from Tolkien's writings of 1930 to 1973 (from Paul Strack's Eldamo lexicon)."
+
+[settings]
+# Pinned settings, for every list. Settings left out are worked out by namebook.
+consonant_clusters = []  # letter groups that each count as one consonant
+multi_vowels = false     # ABA, ORO and the like each count as one vowel
+letter_y = "vowel"       # vowel, consonant or semivowel
+letter_u = "vowel"       # vowel or semivowel
+letter_apostrophe = "vowel"  # vowel (the usual choice) or consonant
+letter_hyphen = "joint"  # consonant (the usual choice) or joint: joins two words, as a space does
+structural = true        # element lengths follow the names
+statistical = true       # common elements are chosen more often
+fit_level = 3            # 0 to 3: how closely neighboring elements must fit
+prefixes = true          # the first two elements come from one name
+suffixes = true          # the last two elements come from one name
+shuffle = false          # middle elements are pooled, whatever their position
+validation_level = 2     # 0 to 2: how strictly letter limits are checked
+refuse_copies = true     # a name that is one of the names below is made again
+markov = "weighted"      # off (building rules alone), weighted or fill (a Markov chain guides the letters)
+markov_strength = 1.0    # 0 to 1: how much the Markov chain counts
+min_length = 0           # fewest letters in a name; 0 for no limit
+max_length = 0           # most letters in a name; 0 for no limit
+punctuation = []         # any of accents (AA as Á), diaeresis (Eärendil), vowel_harmony (Väinö)
+
+[settings.male]
+# Pinned for the list male alone.
+soft_consonants = false  # CH, KH, TH and the like each count as one letter
+markov_order = 3         # letters the Markov chain looks back, 1 to 5; 0 to work it out
+templates = ["#:361", "# #:1", "#-#:2", "# #-#:1"]  # recipe:weight, such as "#:3" or "5'7"; [] for none
+
+[settings.female]
+# Pinned for the list female alone.
+soft_consonants = true  # CH, KH, TH and the like each count as one letter
+markov_order = 2        # letters the Markov chain looks back, 1 to 5; 0 to work it out
+templates = ["#:88", "#-#:1"]  # recipe:weight, such as "#:3" or "5'7"; [] for none
+
+[settings.place]
+# Pinned for the list place alone.
+soft_consonants = false  # CH, KH, TH and the like each count as one letter
+markov_order = 3         # letters the Markov chain looks back, 1 to 5; 0 to work it out
+templates = [            # recipe:weight, such as "#:3" or "5'7"; [] for none
+    "#:403", "# #:178", "#-#:42", "# # #:11", "#-#-#:42", "# # # #:3",
+    "# #-#-#:1", "#-#-#-#:1",
+]
+
+[names]
+male = """
+Adanedhel
+Aearendel
+Aegnor
+Aerandir
+Aerennel
+Agaldor
+Agarwaen
+Airandir
+Amarthan
+Amlaith
+Ammalas
+Amras
+Amrod
+Amroth
+Amrothos
+Anborn
+Ancalagon
+Anfauglin
+Anfauglir
+Angbor
+Angolodh
+Angrod
+Angruin
+Annael
+Aradan
+Arador
+Arafain
+Araglas
+Aragorn
+Aragost
+Arahad
+Arahael
+Aramir
+Aramund
+Aranarth
+Aranel
+Aranuir
+Araphant
+Araphor
+Arassuil
+Arathorn
+Arathornion
+Araval
+Aravir
+Aravorn
+Araw
+Argeleb
+Argon
+Argonui
+Arminas
+Arothir
+Arroch
+Arthad
+Arthod
+Arum
+Arvedui
+Arvegil
+Arveleg
+Asfaloth
+Astoron
+Bannos
+Baragund
+Barahir
+Baranor
+Baravorn
+Barthan
+Bauglir
+Belecthor
+Beleg
+Belegol
+Belegorn
+Belegund
+Belegurth
+Belegûr
+Benrodir
+Beor
+Beregar
+Beregond
+Beren
+Bergil
+Berithil
+Boldog
+Borlach
+Borlad
+Borlas
+Boromir
+Borondir
+Borthand
+Borthandos
+Brandir
+Bregalad
+Bregolas
+Bronwe
+Bór
+Cambant
+Camlost
+Carandrian
+Caranthir
+Carcharoth
+Celeborn
+Celebrimbor
+Celebrindor
+Celebrond
+Celegorm
+Celegorn
+Celepharn
+Cirion
+Cordof
+Cranthir
+Curufim
+Curufin
+Curunír
+Círdan
+Cúthalion
+Daeron
+Dagnir
+Dagorlind
+Dainthor
+Dairuin
+Damrod
+Daur
+Denethor
+Derufin
+Dervorin
+Dior
+Dirgon
+Draugluin
+Du-finnion
+Duilas
+Duilin
+Duinhir
+Dírhael
+Díriel
+Dûr
+Ecthelion
+Edennil
+Edhelharn
+Edrahil
+Egalmoth
+Egnor
+Eladar
+Elboron
+Eldûn
+Elladan
+Elphir
+Elrohir
+Elrond
+Elros
+Elrûn
+Elthoron
+Elu
+Eluchíl
+Eluréd
+Elurín
+Elwe
+Enedrion
+Enerdhil
+Enner
+Eradan
+Erchamion
+Erchamui
+Ereinion
+Erellont
+Erestor
+Ergammon
+Erion
+Estel
+Faenor
+Falathar
+Falborn
+Fangorn
+Fannor
+Faragon
+Faramir
+Felagon
+Felagund
+Fim
+Finarfin
+Findegil
+Findobar
+Findor
+Finellach
+Finglas
+Fingolfin
+Fingon
+Finrod
+Finwain
+Finwe
+Fionwe
+Fladrif
+Fuinur
+Fëanor
+Gaerdil
+Gaerys
+Galadhon
+Galador
+Galathil
+Galathir
+Galdaran
+Galdor
+Garathon
+Gaul
+Gelennil
+Gelion
+Gelir
+Gelmir
+Gethron
+Gil-galad
+Gilbarad
+Gildor
+Gildír
+Gildírion
+Glaurung
+Glindûr
+Glirhuin
+Glorfindel
+Glómund
+Glórindol
+Goenor
+Golasgil
+Gorlim
+Gorthaur
+Gorthol
+Gorthû
+Gostir
+Gothmog
+Grithron
+Guilin
+Gumlin
+Gundor
+Gurfannor
+Gwaewar
+Gwaihir
+Gwindor
+Hador
+Halbarad
+Haldir
+Haleth
+Hallas
+Halldir
+Handir
+Hathaldir
+Hathol
+Hatholdir
+Henderch
+Herion
+Hirgon
+Hirluin
+Huan
+Hundor
+Huor
+Húrin
+Iarwain
+Iarwain Ben-adar
+Iarwath
+Iaur
+Inglor
+Inglorion
+Inram
+Iorhael
+Iorhail
+Iorlas
+Ithilbor
+Iôn
+Keleborn
+Kelegorn
+Labadal
+Laegolas
+Landroval
+Lanhail
+Legolas
+Lhandroval
+Lhathleg
+Lindir
+Lórindol
+Mablung
+Maedhros
+Maeglin
+Maglor
+Magor
+Maidhros
+Malbeth
+Malgalad
+Mallor
+Malvegil
+Manwe
+Marthanc
+Meglin
+Meneldor
+Menelvagor
+Mithrandir
+Moeleg
+Mordu
+Morgoth
+Morthu
+Naeramarth
+Narothal
+Neithan
+Nosdiligand
+Núron
+Oeros
+Olfannor
+Orchaldor
+Ornil
+Orodlin
+Orodreth
+Orofin
+Oropher
+Orophin
+Padathir
+Panthael
+Pengolod
+Pengolodh
+Perhael
+Perhail
+Radhruin
+Radros
+Ragnir
+Ragnor
+Rasmund
+Rhimbron
+Rhimdir
+Rodnor
+Rúmil
+Sador
+Saelon
+Talagand
+Targon
+Tarmund
+Tauron
+Tauros
+Tegilbor
+Telchandir
+Telchar
+Thalion
+Thingol
+Thingódhel
+Thinrod
+Thorondir
+Thorondor
+Thranduil
+Thurin
+Thuringud
+Thû
+Tilion
+Tinfang
+Tolchas
+Torhir Ifant
+Tuor
+Turamarth
+Turcomund
+Turgon
+Turumarth
+Túrin
+Udalraph
+Uiar
+Uldor
+Ulfang
+Ulfast
+Ulu
+Ulwarth
+Urthel
+Yssi
+Yssion
+Úmarth
+"""
+
+female = """
+Adanel
+Airin
+Andreth
+Ar-Feiniel
+Aredhel
+Arien
+Arwen
+Astoreth
+Banwen
+Berethil
+Beril
+Berúthiel
+Bredhil
+Celebrindal
+Celebrían
+Delduthling
+Dineth
+Dolwethil
+Edhellos
+Eilinel
+Eirien
+Elanor
+Elbereth
+Eledhwen
+Ellonel
+Elrenniel
+Elulin
+Elwing
+Emeldir
+Eriant
+Faelivrin
+Failivrin
+Fimbrethil
+Finduilas
+Finvain
+Firiel
+Galadhrien
+Galadriel
+Galadwen
+Gilbrennil
+Gildis
+Gilmith
+Gilraen
+Gilthoniel
+Gilwen
+Gladhwen
+Glorfinniel
+Glorwendil
+Glóredhel
+Gwîr
+Hiril
+Hirwen
+Idril
+Ioreth
+Isfin
+Ivann
+Ivorwen
+Laewen
+Lalaith
+Lhúthien
+Lindis
+Lothíriel
+Lúthien
+Meiniel
+Meldis
+Meleth
+Melian
+Meril
+Mithrellas
+Morwen
+Nellas
+Neth
+Nimlothel
+Nimrodel
+Níniel
+Núneth
+Rodwen
+Rothinel
+Rían
+Saelind
+Thuringwethil
+Timbredhil
+Tinúviel
+Uinen
+Ungoliant
+Urwen
+Yoreth
+Íreth
+Îdh
+"""
+
+place = """
+Achad Tarlang
+Adurant
+Aelin-uial
+Aeluin
+Aglarond
+Aglon
+Airlond
+Alflon
+Alfobas
+Amon Amarth
+Amon Anwar
+Amon Carab
+Amon Darthir
+Amon Dengin
+Amon Dîn
+Amon Ereb
+Amon Ethir
+Amon Gwareth
+Amon Hen
+Amon Lanc
+Amon Lhaw
+Amon Obel
+Amon Rûdh
+Amon Sûl
+Amon Thorn
+Amon Tirith
+Amon Uilos
+Anach
+Andram
+Andras
+Andrast
+Andrath
+Androth
+Anduin
+Anfalas
+Anfauglith
+Angast
+Angband
+Anghabar
+Angmar
+Angolonn
+Angren
+Angrenost
+Angrobel
+Annon-in-Gelydh
+Annúminas
+Anórien
+Arad Dain
+Arannur
+Ard-galen
+Ardholen
+Ardhon
+Argonath
+Arnen
+Arnor
+Aros
+Arossiach
+Arthedain
+Arthor na Challonnas
+Arthor na Forlonnas
+Arthoren
+Arthórien
+Ascar
+Athrad Angren
+Athrad Dhaer
+Avon
+Bair Nestad
+Balannor
+Balar
+Bar Erib
+Bar-en-Danwedh
+Bar-en-Nibin-noeg
+Bar-goll
+Bar-in-Gwael
+Bar-in-Mŷl
+Barad Amroth
+Barad Eithel
+Barad Nimras
+Barad-dûr
+Baranduin
+Belegaer
+Belegast
+Beleghir
+Belegoer
+Belegost
+Beleriand
+Belfalas
+Bered Ondrath
+Berennyr
+Bladorion
+Branduin
+Brethil
+Brethorn
+Brilthor
+Brithiach
+Brithombar
+Brithon
+Bruinen
+Cabed Naeramarth
+Cabed-en-Aras
+Caerost
+Cair Andros
+Cairros
+Calembel
+Calenardhon
+Calendil
+Calenhad
+Calenhir
+Carach Angren
+Caradhras
+Caradras
+Caragdûr
+Caran-rass
+Caras Galadhon
+Caras Galadon
+Carchost
+Cardolan
+Carn Dûm
+Carnen
+Caron-dûn
+Caur
+Celduin
+Celebdil
+Celebrant
+Celebras
+Celebrin
+Celebros
+Celon
+Celos
+Cerin Amroth
+Cilgalad
+Cilthorondor
+Cinderion
+Ciril
+Cirith Dúath
+Cirith Forn en Andrath
+Cirith Gorgor
+Cirith Helvin
+Cirith Ninniach
+Cirith Thoronath
+Cirith Ungol
+Cobas
+Cormallen
+Crandir
+Cris-caron
+Cris-Ilfing
+Crisaegrim
+Crissaegrim
+Cristhorn
+Cílu
+Côf Belfalas
+Côf Gwaeren Bel
+Cûl Bîn
+Cûl Veleg
+Cûm-na-Dengin
+Cûm-nan-Arasaith
+Daedhelos
+Dagorlad
+Dalath Dirnen
+Dant-ruinel
+Deldúwath
+Dimbar
+Dimrost
+Din-Caradras
+Din-Dûhir
+Dol Amroth
+Dol Baran
+Dol Guldur
+Dol Tarlang
+Dolad
+Dolamarth
+Dolbaran
+Dolereb
+Dolmed
+Dor Caranthir
+Dor Daedeloth
+Dor Dínen
+Dor Firn i Guinar
+Dor Firn-i-Guinar
+Dor Granthir
+Dor Gyrth i Chuinar
+Dor i Thuin
+Dor Lindon
+Dor-Cúarthol
+Dor-Daideloth
+Dor-en-Ernil
+Dor-i-Ndainn
+Dor-lómen
+Dor-lómin
+Dor-na-Daerachas
+Dor-na-Fauglith
+Dor-na-Thuin
+Dor-nu-Fauglith
+Dor-Rodyn
+Dor-tathrin
+Doriath
+Dorlamren
+Dorloven
+Dorthonion
+Dorwinion
+Drengist
+Drúwaith
+Drúwaith Iaur
+Drûn
+Duath
+Duil Rewinion
+Duilwen
+Duin Dhaer
+Duin Morghul
+Dunhirion
+Dunruin
+Durthang
+Dúnad in Gyrth
+Echad i Sedryn
+Echoriath
+Edelbar
+Edhellond
+Eges-hirion
+Egladil
+Eglador
+Eglahir
+Eglamar
+Eglarest
+Eithel Ivrin
+Eithel Nínui
+Eithel Sirion
+Eledûn
+Elennor
+Elivorn
+Emerin
+Emris
+Emyn Arnen
+Emyn Beraid
+Emyn Duir
+Emyn Eglain
+Emyn Muil
+Emyn Rhain
+Emyn Uial
+Emyn-nu-Fuin
+Ened
+Enedwaith
+Ennor
+Ennorath
+Ephel Brandir
+Ephel Dúath
+Ephel Nimrais
+Erebor
+Erebras
+Ered Engrin
+Ered Gorgoroth
+Ered Lindon
+Ered Lithui
+Ered Luin
+Ered Lómin
+Ered Mithrin
+Ered Nimrais
+Ered Nimras
+Ered Nimrath
+Ered Orgoroth
+Ered Wethrin
+Ered-engrin
+Eredfain
+Eredhithui
+Eredlemrin
+Eredlindon
+Eredlithui
+Eredluin
+Eredlómin
+Eredvyrn
+Eredwethion
+Ereg
+Eregion
+Eregon
+Eressai
+Eriador
+Erui
+Eryd Echor
+Eryd Lammad
+Eryd-Lómin
+Eryd-wethion
+Eryn Fuir
+Eryn Galen
+Eryn Lasgalen
+Eryn Vorn
+Esgalduin
+Esgaliant
+Estolad
+Ethelion
+Ethir Anduin
+Ethir-anduin
+Ethraid Engrin
+Ethring
+Falas
+Fanuidhol
+Fanuidol
+Fanuiras
+Fauglith
+Fen Hollen
+Fenn Uiforn
+Flend
+Foen
+Forannest
+Forfain
+Forfalas
+Forlindon
+Forlond
+Forlonnas
+Forlorn
+Fornarthan
+Fornobel
+Fornost
+Forochel
+Forodwaith
+Forodweith
+Fuin Gorgoroth
+Garthoren
+Garthúrian
+Geleidhien
+Gelion
+Gilrain
+Ginglith
+Gladuial
+Glanduin
+Glanhír
+Glithui
+Glornan
+Glossarnach
+Gondobar
+Gondolin
+Gondor
+Gondost
+Gondothrimbar
+Gondrant
+Gorgoroth
+Gorgos
+Gwathfuin-Daidelos
+Gwathir
+Gwathló
+Gwerth-i-Cuina
+Gwinion
+Hadhodrond
+Haerast
+Haeren
+Hallonnas
+Harad
+Haramon
+Harathrad
+Harfalas
+Harlindon
+Harlond
+Harlorn
+Harnen
+Harondor
+Haudh in Gwanûr
+Haudh-en-Arwen
+Haudh-en-Ellas
+Haudh-en-Elleth
+Haudh-en-Ndengin
+Haudh-en-Nirnaeth
+Haudh-na-Dengin
+Hebel Dúath
+Hebel Uilos
+Helcharaes
+Helevorn
+Henneth Annûn
+Himlad
+Himling
+Himring
+Hithaeglir
+Hithdilias
+Hithliniath
+Hithlum
+Hithlû
+Hobas in Elf
+Hírilorn
+Iant Iaur
+Iaros
+Imlad Morghul
+Imlad Morgul
+Imlad Morthond
+Imlad-Ringlo
+Imladris
+Imloth Melui
+Imrath Gondraich
+Ingildon
+Inglormindon
+Ingwil
+Ithilduin
+Ithilien
+Ivrin
+Ivrineithil
+Kalenarda
+Kelos
+Kelufain
+Kerin-muil
+Kiril
+Kirith Gorgor
+Kirith Naglath
+Kirith Ungol
+Kormallen
+Ladros
+Lameduin
+Lammoth
+Lanthir Lamath
+Lebennin
+Lefnui
+Legolin
+Lhawhen
+Lhefneg
+Lhothlann
+Lhuien
+Lhúnorodrim
+Lhûn
+Limhír
+Limlint
+Limphîr
+Linaewen
+Lindon
+Linhir
+Lisgardh
+Lithir
+Lithlad
+Loeg Ningloron
+Lond Daer
+Lond Daer Enedh
+Lonnath-Ernin
+Losgar
+Lossarnach
+Lostladen
+Lothlann
+Lothlórien
+Luindirien
+Lórien
+Lô Dhaer
+Malduin
+Math-Fuin-delos
+Melineth
+Men Falros
+Men-i-Naugrim
+Menegroth
+Menelrond
+Methed-en-Glad
+Methedras
+Methen Amon
+Methendol
+Methiriad
+Min-Rimmon
+Minas Anor
+Minas Ithil
+Minas Morgol
+Minas Morgul
+Minas Tirith
+Mindeb
+Mindolluin
+Mindor Uilas
+Minhiriath
+Minnastirith
+Minrimmon
+Mitheithel
+Mithlond
+Mithrim
+Mordor
+Morgai
+Morgulduin
+Moria
+Mornan
+Mornvenniath
+Morthond
+Naith
+Nan Curunír
+Nan Dongoroth
+Nan Dungortheb
+Nan Elmoth
+Nan Gondresgion
+Nan Gurunír
+Nan Laur
+Nan-eregdos
+Nan-tathren
+Nan-Tathrin
+Nanduhiriath
+Nanduhirion
+Nann Orothvor
+Narch
+Narchost
+Nardol
+Nargil
+Nargos
+Nargothrond
+Narodûm
+Narog
+Narogardh
+Narosîr
+Narthas
+Neldoreth
+Neleg Thilim
+Neleglos
+Nelen
+Nen Cenedril
+Nen Echui
+Nen Fimred
+Nen Girith
+Nen Hithoel
+Nen Lalaith
+Nen-uinel
+Nenning
+Nenuial
+Nenvithim
+Nerwing
+Nevrast
+Nimbrethil
+Nimdil
+Nimdildor
+Nimras
+Nindalf
+Nivrim
+Nogrod
+Nornhabar
+Novrod
+Nurn
+Nîn-in-Eilph
+Núath
+Núrnen
+Odotheg
+Odothui
+Oeges Engrin
+Oelinuial
+Ogodrûth
+Ogolmar
+Onodló
+Orchorod
+Orfalas
+Orfalch Echor
+Orod Thuin
+Orod-na-Thôn
+Orodras
+Orodruin
+Orthanc
+Osforod
+Osgiliath
+Ossir
+Ossiriand
+Ost-in-Edhil
+Ostechain
+Othram
+Othramar
+Palath Nenui
+Palath-ledin
+Palathrin
+Parth Celebrant
+Parth Galen
+Pelargir
+Pelennor
+Pen-arduin
+Penannon
+Pendrethdulur
+Pensarn
+Pinnath Gelin
+Poros
+Ramas Coren
+Ramdal
+Rammas Echor
+Rammas Ephel
+Ras Mewrim
+Ras Morthil
+Ras-Arphain
+Rath a Chelerdain
+Rath Celerdain
+Rath Dínen
+Rathcarn
+Rathlóriel
+Rauros
+Region
+Rerir
+Rhamdal
+Rhascaron
+Rhimdad
+Rhofannor
+Rhosfein
+Rhosgobel
+Rhovanion
+Rhudaur
+Rhûn
+Rhûnaer
+Ringló
+Ringnen
+Ringwil
+Rivil
+Rochand
+Rohan
+Ruinel
+Ruinnel
+Rúnaeluin
+Sammath Naur
+Sarn Athrad
+Sarn Gebir
+Sarn Ruin
+Sarnas Fingolfin
+Sennas Iaur
+Serech
+Sern Aranath
+Sern Lamrach
+Sern Ubed
+Serni
+Siriombar
+Sirion
+Sirith
+Sîr Angren
+Sîr Luin
+Sîr Ninglor
+Taeglin
+Taen-Nimdil
+Talath Dirnen
+Talath Rhúnen
+Taragaer
+Taras
+Taras-ness
+Tarlang
+Tarn Felin
+Tarn na Donnrhyn
+Tarnost
+Taur-en-Faroth
+Taur-i-Melegyrn
+Taur-im-Duinath
+Taur-na-Chardhîn
+Taur-na-Danion
+Taur-na-Delduath
+Taur-na-Faroth
+Taur-na-Foen
+Taur-na-Fuin
+Taur-na-Neldor
+Taur-nan-Erig
+Taur-nu-Fuin
+Taur-rimmon
+Taurost
+Tavrobel
+Tawar-in-Drúedain
+Tawarwaith
+Teiglin
+Terch Ungol
+Thalos
+Thanador
+Thangorodrim
+Tharbad
+Thargelion
+Thenfalas
+Thonador
+Tindobel
+Tirith Aear
+Tol Brandir
+Tol Brandor
+Tol Falas
+Tol Fuin
+Tol Galen
+Tol Morwen
+Tol Sirion
+Tol Thû
+Tol Varad
+Tol-galen
+Tol-in-Gaurhoth
+Tol-na-Gaurhoth
+Tolfalas
+Tolharn
+Toll-ereb
+Toll-ondren
+Tolsirion
+Tor-dilluin
+Torech Ungol
+Torfirion
+Trandóran
+Trann
+Tum Dincelon
+Tum Gondregain
+Tum Orchorod
+Tum-halad
+Tumhalad
+Tumladen
+Tyrn Gorthad
+Tûn
+Udûn
+Uilos
+Uvanwaith
+"""

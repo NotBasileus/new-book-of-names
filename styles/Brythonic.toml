@@ -1,0 +1,1502 @@
+# A namebook style: example names, and any settings pinned for them.
+
+title = "Brythonic"
+description = "Names of the Britons of Wales, Cornwall, Brittany and the North and their legends, about 400 to 1300 (from the Mabinogion, Baring-Gould's Lives of the British Saints and Wikidata)."
+
+[settings]
+# Pinned settings, for every list. Settings left out are worked out by namebook.
+soft_consonants = false  # CH, KH, TH and the like each count as one letter
+consonant_clusters = []  # letter groups that each count as one consonant
+multi_vowels = false     # ABA, ORO and the like each count as one vowel
+letter_y = "vowel"       # vowel, consonant or semivowel
+letter_u = "vowel"       # vowel or semivowel
+letter_apostrophe = "vowel"  # vowel (the usual choice) or consonant
+letter_hyphen = "consonant"  # consonant (the usual choice) or joint: joins two words, as a space does
+structural = true        # element lengths follow the names
+statistical = true       # common elements are chosen more often
+fit_level = 3            # 0 to 3: how closely neighboring elements must fit
+prefixes = true          # the first two elements come from one name
+suffixes = true          # the last two elements come from one name
+shuffle = false          # middle elements are pooled, whatever their position
+validation_level = 2     # 0 to 2: how strictly letter limits are checked
+refuse_copies = true     # a name that is one of the names below is made again
+markov = "weighted"      # off (building rules alone), weighted or fill (a Markov chain guides the letters)
+markov_order = 2         # letters the Markov chain looks back, 1 to 5; 0 to work it out
+markov_strength = 1.0    # 0 to 1: how much the Markov chain counts
+min_length = 0           # fewest letters in a name; 0 for no limit
+max_length = 0           # most letters in a name; 0 for no limit
+punctuation = []         # any of accents (AA as Á), diaeresis (Eärendil), vowel_harmony (Väinö)
+
+[settings.male]
+# Pinned for the list male alone.
+templates = []  # recipe:weight, such as "#:3" or "5'7"; [] for none
+
+[settings.female]
+# Pinned for the list female alone.
+templates = []  # recipe:weight, such as "#:3" or "5'7"; [] for none
+
+[settings.surname]
+# Pinned for the list surname alone.
+templates = []  # recipe:weight, such as "#:3" or "5'7"; [] for none
+
+[settings.place]
+# Pinned for the list place alone.
+templates = ["#:171", "# #:144", "# # #:24"]  # recipe:weight, such as "#:3" or "5'7"; [] for none
+
+[names]
+male = """
+Achebran
+Adaon
+Adeinog
+Adeon
+Aedd
+Aeddan
+Aelgyfarch
+Aelhaiarn
+Aergol
+Afagddu
+Afan
+Aflawn
+Allgo
+Alun
+Amaethon
+Ambreu
+Amhar
+Amren
+Amwn
+Anarawd
+Anarog
+Andras
+Anef
+Aneirin
+Aneurin
+Anghawd
+Anian
+Annwas
+Annyanniog
+Arawn
+Ardwyad
+Armel
+Arthen
+Arthfael
+Arthfoddw
+Arthgal
+Arthmael
+Arthneu
+Arthur
+Arthwys
+Arwystl
+Aryan
+Asaph
+Asser
+Athrwys
+Austell
+Austol
+Baeddan
+Baglan
+Barruc
+Bedrawd
+Bedwas
+Bedwini
+Bedwor
+Bedwyr
+Bedyw
+Beli
+Bendigeidfran
+Berwyn
+Beulan
+Beuno
+Bigail
+Blathaon
+Bleddri
+Bleddyn
+Bledric
+Bleiddian
+Bradwen
+Bran
+Branwalader
+Briac
+Bridei
+Brioc
+Brochfael
+Brochwel
+Brothen
+Brychan
+Brynach
+Bryssethach
+Buddwal
+Budic
+Budmail
+Budoc
+Bugi
+Cad
+Cadafael
+Cadarn
+Cadell
+Cadfan
+Cadfarch
+Cadfrawd
+Cadgyfarch
+Cadgyffro
+Cado
+Cadoc
+Cador
+Cadwaladr
+Cadwallon
+Cadwgan
+Cadwr
+Cadyriaith
+Cadyrnerth
+Caemen
+Cai
+Caian
+Cailtram
+Cammarch
+Cannen
+Caradog
+Carannog
+Carneddyr
+Casnar
+Caswallawn
+Caswallon
+Caw
+Cawrdaf
+Cedarn
+Cedwyn
+Ceidio
+Ceitho
+Celcoed
+Celin
+Celyn
+Celynin
+Ceneu
+Cenwyn
+Ceredig
+Cewydd
+Cilcoed
+Cilhwch
+Cilydd
+Cimin
+Cinfic
+Ciniod
+Cinuit
+Ciwg
+Clether
+Cloffan
+Cloten
+Clud
+Clust
+Clustfeinad
+Clustfeinyd
+Clydno
+Clydog
+Clydwyn
+Cneppyn
+Coel
+Cof
+Collen
+Comoere
+Conan
+Congar
+Connyn
+Conoc
+Conomor
+Conwoion
+Corentine
+Cradog
+Crallo
+Credan
+Crychwr
+Cuhelyn
+Culfanawyd
+Culhwch
+Cunedda
+Cuneglas
+Curig
+Custennin
+Cwyfen
+Cybi
+Cyfeilliog
+Cyfelach
+Cyffyllog
+Cyflas
+Cyfwlch
+Cyhylyn
+Cynan
+Cyndaf
+Cynddelw
+Cynddylan
+Cynddylig
+Cyndeyrn
+Cyndrwyn
+Cyner
+Cynfab
+Cynfarch
+Cynfarwy
+Cynfelyn
+Cynfran
+Cynfyn
+Cynfyw
+Cyngar
+Cyngen
+Cynhafal
+Cynhaiarn
+Cynheiddon
+Cynidr
+Cynin
+Cynllo
+Cynog
+Cynon
+Cynwal
+Cynwas
+Cynwrig
+Cynwyd
+Cynwyl
+Cynydyn
+Cynyr
+Daere
+Dafydd
+Dalldaf
+Daned
+Decuman
+Dedyw
+Deiniol
+Derfel
+Digain
+Digon
+Diheufyr
+Diles
+Dillus
+Dingad
+Dirdan
+Dirmyg
+Doged
+Dogfael
+Dona
+Donyarth
+Dorath
+Drem
+Dremhitid
+Dremidyd
+Drest
+Drudwas
+Dumnagual
+Dunard
+Dunawd
+Dunod
+Dunwyd
+Dwyfael
+Dwywai
+Dwywg
+Dyfan
+Dyfanog
+Dyfel
+Dyfnan
+Dyfnedig
+Dyfnig
+Dyfnog
+Dyfnwal
+Dyfyr
+Dylan
+Echel
+Edern
+Edeyrn
+Edi
+Ednyfed
+Efnysien
+Efrog
+Egryn
+Egwad
+Eidoel
+Eidyol
+Eigion
+Eigron
+Eiladyr
+Eiludd
+Einion
+Eithras
+Elaeth
+Eleri
+Elfan
+Elffin
+Elfod
+Elgar
+Elgud
+Elian
+Elicguid
+Elidir
+Eliffer
+Elisedd
+Elldeyrn
+Elli
+Eloan
+Elphin
+Elystan
+Emrys
+Emyr
+Eneyd
+Enghenedl
+Enoder
+Envel
+Erb
+Erbin
+Erfyll
+Ergyryad
+Eri
+Erim
+Erispoe
+Ermid
+Ernin
+Ethbin
+Etmic
+Eudaf
+Euddog
+Eugein
+Eugrad
+Euny
+Eurei
+Eurosswydd
+Euryn
+Ewryd
+Febric
+Felec
+Feock
+Ffagan
+Ffernfael
+Ffili
+Fflam
+Fflergant
+Ffleudor
+Fflewyn
+Fodor
+Fracan
+Gadwy
+Galam
+Galan
+Garai
+Garannaw
+Garanwyn
+Garbanion
+Gartnait
+Garwy
+Garwyli
+Gastayn
+Genys
+Geraint
+Gerenhir
+Gerent
+Gilda
+Gildas
+Gilennhin
+Gilfaethwy
+Glew
+Glewlwyd
+Glinneu
+Gloyw
+Glythwyr
+Glywys
+Gnawan
+Gobrwy
+Gofannon
+Gofor
+Gofynyon
+Gohoyw
+Golithmer
+Gonant
+Gonery
+Goreu
+Gorlois
+Gormant
+Goronwy
+Goryon
+Goulven
+Gourmaelon
+Gradlon
+Granwen
+Gredfyw
+Gredifael
+Greid
+Greidawl
+Greit
+Griedawl
+Gronw
+Gronwy
+Grudyen
+Gruffudd
+Gruffydd
+Grwst
+Gryffydd
+Gudwal
+Guernabui
+Guihomar
+Guorboe
+Guordocui
+Guorvan
+Guret
+Gurhaual
+Gurmaet
+Guron
+Gurthiern
+Gurval
+Gurvan
+Gurvand
+Gurwal
+Guyer
+Gwaedd
+Gwainerth
+Gwair
+Gwalchmai
+Gwaledyr
+Gwalehes
+Gwalhafed
+Gwallawg
+Gwallog
+Gwarthegyd
+Gwawl
+Gwdolwyn
+Gwefyl
+Gweir
+Gweirydd
+Gwenael
+Gwenddoleu
+Gwennwynwyn
+Gwenwynwyn
+Gwern
+Gwerydd
+Gwestad
+Gwestlan
+Gwestyl
+Gwgon
+Gwilenhin
+Gwilim
+Gwilym
+Gwion
+Gwrdaf
+Gwrddelw
+Gwrdinal
+Gwreang
+Gwres
+Gwrfyw
+Gwrgan
+Gwrgant
+Gwrgi
+Gwrhai
+Gwrhir
+Gwrhyr
+Gwriad
+Gwrin
+Gwrmael
+Gwrnerth
+Gwrtheyrn
+Gwrthwl
+Gwrwared
+Gwrwst
+Gwryon
+Gwyar
+Gwyddelan
+Gwyddfarch
+Gwyddlew
+Gwyddloyw
+Gwyddno
+Gwyddog
+Gwyddyn
+Gwydion
+Gwydre
+Gwyllennhin
+Gwylog
+Gwyn
+Gwyndaf
+Gwyndeg
+Gwynfardd
+Gwyngad
+Gwyngeneu
+Gwynhoedl
+Gwynin
+Gwynlleu
+Gwynllyw
+Gwynn
+Gwynog
+Gwynws
+Gwystyl
+Gwythelin
+Gwytherin
+Gwythog
+Gwythyr
+Gynaid
+Hadwry
+Hafgan
+Hefeydd
+Heilin
+Heilyn
+Helan
+Henbedestyr
+Henwg
+Henwyn
+Hettwn
+Hirpeissog
+Hoedloyw
+Hoel
+Hoergnoue
+Hoernbiu
+Hoiernin
+Howel
+Huail
+Huarwar
+Hueil
+Hunabwy
+Huui
+Hyfaidd
+Hyldren
+Hywel
+Hywyn
+Iaen
+Iago
+Iddew
+Iddic
+Iddog
+Iddon
+Idloes
+Idris
+Idunet
+Idwal
+Idwallon
+Iestyn
+Ieuaf
+Ieuan
+Ifor
+Ilan
+Illid
+Illog
+Illogan
+Illtud
+Illtyd
+Iorwerth
+Isan
+Iscawin
+Iscawyn
+Isfael
+Ithel
+Iwig
+Jaoua
+Judhael
+Judicael
+Judnou
+Judoc
+Junabui
+Junanau
+Justinian
+Leutiern
+Levan
+Libiau
+Llacheu
+Llaesar
+Llary
+Llassar
+Llecheu
+Llefelys
+Lleision
+Llenog
+Lleu
+Lleuddad
+Llibio
+Llidnerth
+Llonio
+Lludd
+Lluddica
+Llwchaiarn
+Llwni
+Llwybyr
+Llwyd
+Llwydden
+Llwyddeu
+Llwyddog
+Llwyr
+Llwyryon
+Llyfab
+Llyr
+Llywarch
+Llywel
+Llywelyn
+Llywen
+Llywes
+Lythan
+Mabon
+Mabsant
+Machraith
+Macsen
+Madog
+Mael
+Maelgwn
+Maelog
+Maelrys
+Maelwys
+Maethlu
+Maglorius
+Maig
+Malo
+Manaccus
+Manawydan
+Manawyddan
+Manogan
+Manwgan
+March
+Maredudd
+Maredydd
+Marthaerun
+Maruan
+Math
+Matholwch
+Mathonwy
+Mawes
+Mawgan
+Mawnan
+Mawrheth
+Mechell
+Mechydd
+Medan
+Medrawd
+Medwy
+Medyr
+Meen
+Meigan
+Meilic
+Meilyr
+Meirchawn
+Meirchion
+Meirion
+Mellt
+Melor
+Melwas
+Melyd
+Menestyr
+Menw
+Merfyn
+Meriasek
+Merin
+Mernog
+Merwydd
+Methredydd
+Meubred
+Meugan
+Meurig
+Meuthi
+Meven
+Miliau
+Mirgint
+Mor
+Moran
+Mordeyrn
+Moren
+Morfran
+Morgan
+Morgant
+Morgeneu
+Morhaiarn
+Morien
+Morman
+Morvan
+Mwrog
+Mydan
+Myfor
+Mynno
+Mynyddog
+Mynyo
+Myrddin
+Naf
+Naw
+Nechtan
+Nectan
+Neffei
+Nefydd
+Neiriad
+Neithon
+Neol
+Neot
+Ner
+Nerth
+Nethog
+Nidan
+Nisien
+Nissyen
+Noethon
+Nominoe
+Nudd
+Nuvien
+Nwyfre
+Nwython
+Nynniaw
+Odgar
+Ofan
+Olwydd
+Ondyaw
+Oudoceus
+Owain
+Pabai
+Pabo
+Padarn
+Padrig
+Panon
+Pascweten
+Pasgen
+Pebin
+Peblig
+Pebyr
+Pedrwn
+Pedyr
+Peirio
+Peredur
+Perif
+Perwas
+Petroc
+Peulan
+Piran
+Porthawr
+Pryderi
+Pwyll
+Rhain
+Rheidwn
+Rhein
+Rheithian
+Rhian
+Rhidian
+Rhiogan
+Rhiryd
+Rhiwallon
+Rhodri
+Rhonabwy
+Rhuddfedel
+Rhun
+Rhwydrys
+Rhwyf
+Rhyawd
+Rhychwyn
+Rhydderch
+Rhygyfarch
+Rhys
+Rhystyd
+Ricca
+Riderch
+Ridoredh
+Riogonedd
+Riwal
+Riwallon
+Ruan
+Rydoch
+Sadwrn
+Sadyrnin
+Saeran
+Saidi
+Samled
+Samson
+Sant
+Saranhon
+Sawyl
+Segin
+Seiriol
+Seisyll
+Seithfed
+Selgi
+Selyf
+Senewyr
+Siawn
+Simaus
+Sinnoch
+Sithney
+Solor
+Sugnedydd
+Sugyn
+Sulbiu
+Sulien
+Sulyen
+Taliesin
+Tallwch
+Talorc
+Talorg
+Talorgan
+Tanguy
+Tangwn
+Tanwg
+Taran
+Tathan
+Tavauc
+Tecwyn
+Tegai
+Tegfan
+Tegid
+Tegonwy
+Tegwared
+Tegwel
+Tegwy
+Tegwyn
+Teilo
+Teirgwaedd
+Teithyon
+Tenenan
+Teon
+Teregud
+Teudebur
+Teulyddog
+Tewdr
+Tewdrig
+Tewdwr
+Teyrnog
+Teyrnon
+Trahaearn
+Triffyn
+Trillo
+Tringad
+Trunio
+Trwyth
+Tryffin
+Trystan
+Tudclyd
+Tudfathar
+Tudno
+Tudur
+Tudwal
+Tudwg
+Tudy
+Tutwal
+Twrch
+Twrgadarn
+Tydecho
+Tydiwg
+Tyfanog
+Tyfodwg
+Tyfriog
+Tyfrydog
+Tyrnog
+Tysilio
+Tysoi
+Tyssilio
+Tyssul
+Uchtryd
+Ufelwy
+Urien
+Ust
+Ustig
+Usyllt
+Uthyr
+Uuen
+Uurad
+Waroch
+Wethenoc
+Wihomarc
+Winnoc
+Winwaloe
+Ynyr
+Ynywl
+Ysbaddaden
+Yscawndroed
+Ysgawd
+Ysgwn
+Yspaddaden
+Ysperni
+Ystyffan
+"""
+
+female = """
+Adwen
+Alarch
+Alava
+Ambrusca
+Angharad
+Annest
+Annun
+Aranwen
+Arddun
+Arianell
+Arianrhod
+Arianrod
+Arianwen
+Arilda
+Banhadlen
+Belyau
+Blodeuwedd
+Branwen
+Breaca
+Cain
+Callwen
+Canna
+Catrin
+Ceindrych
+Ceingair
+Ceinwen
+Cenhedlon
+Ceridwen
+Cicfa
+Cigfa
+Clodfaith
+Clydai
+Creda
+Creiddylad
+Creirwy
+Cyhyreith
+Cynheiddon
+Cywair
+Cywyllog
+Don
+Dwyn
+Dwynwen
+Dwywai
+Dyddgu
+Edwen
+Efa
+Efrddyl
+Eheubryd
+Eigr
+Eiliwedd
+Elen
+Elidan
+Elliw
+Ellylw
+Ellyw
+Eluned
+Endelienta
+Eneuog
+Enid
+Enora
+Enrydreg
+Erddudnid
+Erfyl
+Essyllt
+Eurgain
+Eurneid
+Eurolwen
+Ewaedan
+Ffraid
+Generys
+Genilles
+Goewin
+Goleuddydd
+Gorascwrn
+Gorasgwrn
+Guenedon
+Gwaedan
+Gwawr
+Gwawrddydd
+Gweirca
+Gwen
+Gwenabwy
+Gwenan
+Gwenasedd
+Gwenddydd
+Gwenfaen
+Gwenfrewi
+Gwenhwyach
+Gwenhwyfach
+Gwenhwyfar
+Gwenllian
+Gwenlliw
+Gwenllwyfo
+Gwennwledyr
+Gwenog
+Gwenonwy
+Gwenrhiw
+Gwerful
+Gwerfyl
+Gwladus
+Gwladys
+Gwrygon
+Gwynen
+Hawystl
+Heledd
+Hia
+Hunydd
+Indeg
+Iwerydd
+Llechid
+Lleuci
+Lleucu
+Lluan
+Luned
+Mabenna
+Maches
+Madrun
+Marared
+Marchell
+Meddwid
+Melangell
+Modron
+Morfudd
+Morgen
+Myfanwy
+Nest
+Newlyna
+Ninnoc
+Non
+Nyfain
+Olwen
+Orddu
+Peithian
+Penarddun
+Penardun
+Piala
+Rhelemon
+Rhiannon
+Rhiengar
+Riwanon
+Senana
+Senena
+Sennara
+Sith
+Tangwystl
+Tannwen
+Tegau
+Tegfedd
+Tegiwg
+Tegla
+Tegwedd
+Tegwen
+Teleri
+Tenoi
+Tudful
+Tudglid
+Tudhistil
+Tudwen
+Tybie
+Tydfil
+Tydieu
+Wenna
+"""
+
+surname = """
+Aeron
+Ardudwy
+Arfon
+Arwystli
+Bach
+Bendigaid
+Benfras
+Brycheiniog
+Brydydd
+Buellt
+Calchfynydd
+Cedweli
+Cemais
+Ceredigion
+Ceri
+Cernyw
+Coch
+Coedana
+Crach
+Cydewain
+Dda
+Ddall
+Ddewr
+Ddu
+Deheubarth
+Domnonea
+Du
+Dunoding
+Dyfed
+Dyfnaint
+Edeirnion
+Eifionydd
+Elfael
+Elmet
+Emlyn
+Erging
+Ergyng
+Fain
+Farfog
+Fawr
+Felyn
+Fendigaid
+Foel
+Fras
+Freichfras
+Frych
+Fychan
+Gadarn
+Gam
+Garwyn
+Gethin
+Gloff
+Glywysing
+Goch
+Gododdin
+Gryg
+Gwened
+Gwent
+Gwrtheyrnion
+Gwyn
+Gwynedd
+Gwyr
+Hael
+Hen
+Hir
+Hirfain
+Hyfaidd
+Ieuanc
+Lawhir
+Leon
+Lledrith
+Llew
+Llwyd
+Llyn
+Maelienydd
+Manaw
+Mawr
+Meirionnydd
+Melyn
+Moel
+Mon
+Morgannwg
+Pebidiog
+Penhir
+Powys
+Rheged
+Rhos
+Rhufoniog
+Sais
+Teg
+Tegeingl
+Tew
+Wan
+Wyllt
+Wyn
+Ysgolhaig
+"""
+
+place = """
+Aberffraw
+Aeron
+Afallach
+Alet
+Alltudion
+Alt Clut
+Annwfn
+Aper Camfrut
+Aper Coguin
+Aper Epirthun
+Aper Guenfrut
+Aper Humur
+Aper Menei
+Aper Mynuy
+Arberth
+Ardudwy
+Arfon
+Bachlatron
+Bard
+Barry
+Bed ir AUtudion
+Bedewas
+Biuguan
+Bodmin
+Brachan
+Brangwayn
+Branuc
+Brat
+Breican
+Breit
+Brekilien
+Brigide Maioris
+Brycheiniog
+Bryneich
+Buch
+Buellt
+Caer Arianrhod
+Caer Dathyl
+Caer Liwelydd
+Caer Llion
+Caer Loyw
+Caer Lundein
+Caer Sidi
+Caer Wydyr
+Cair Birran
+Cair Caiau
+Cair Castell
+Cair Di
+Cair Duicil
+Cair Guent
+Cair Lion
+Cair Mirdin
+Cair Nonov
+Cair Rein
+Canthed
+Catlan
+Catraeth
+Cecin Clisti
+Cecin ir alt
+Cecin Meirch
+Cecin Penn Ros
+Cenou
+Ceredigiawn
+Cichmanw
+Cil Catan
+Cil Circh
+Cil Ciuhin
+Cil Coit
+Cil Fotul
+Cil Hal
+Cil Idris
+Cil ir adar
+Cil Luch
+Cil Meiniauc
+Cil Pedec
+Cil Retin
+Cil Tutuc
+Cinbran
+Cingur Trosgardi
+Cinir
+Cinuc
+Cinvall
+Circhan
+Civiu
+Clidvan
+Clud
+Cogan
+Coit Guent
+Collou
+Congint
+Conlipan
+Conloc
+Couin
+Coytyf
+Crican
+Crintorth
+Cruc Glas
+Cul Cudyn
+Cum Carvan
+Cum Cetguinn
+Cum Cinreith
+Cum Kydy
+Deifr
+Derguist
+Dimuner
+Din Birrion
+Din Dirn
+Din Duicil
+Din Eidyn
+Din Gerein
+Din Guenhav
+Din Marchtan
+Dinas Emreis
+Dincat
+Dinneul
+Dintagell
+Dol
+Domnonea
+Doudec Seint
+Duuin
+Dyfed
+Dynan
+Ebrdil
+Eclin
+Edeirnion
+Eguic
+Eidyn
+Eilin
+Eilon
+Eithav
+Elcu
+Elfael
+Eliau
+Elichguid
+Elidon
+Ellgnou
+Elmet
+Ergyng
+Estom Lowern
+Estrat Agcr
+EUcon
+Ewenny
+Gloyiud
+Glyn Cuch
+Glywysing
+Gododdin
+Gorsedd Arberth
+Greitiaul
+Grosemond
+Grucauc
+Guaidan
+Gueithirin
+Guened
+Guilbiu
+Guiofcon
+Gulich
+Guliple Minor
+Gunniau
+Gunos
+Guocov
+Guoidhearn
+Gurberth
+Guruid
+Gwales
+Gwent
+Gwynedd
+Gwynllwg
+Hancr
+Harddlech
+Hebauc
+Helic
+Hen alt
+Iliman
+Irgudin
+Irhen
+Isceiauc
+Istrat Gui
+Istrat lu
+Istrat Our
+Iwerddon
+Kelli Wic
+Kemper
+Ker Is
+Kerne
+Kernou
+Kernyw
+Kil Gorrock
+Kil Goygan
+Kilthy Karn
+Landeuenec
+Lannbrobi
+Lechou
+Leon
+Lis Castell
+Lis Guern
+Lloegr
+Llychlyn
+Llydaw
+Louhelic
+Machynys
+Maelienydd
+Magor
+Mainaur Mathru
+Mainaur Pir
+Mainaur Tnoumur
+Mamheilad
+Mamouric
+Manach
+Manaw
+March
+Marchleu
+Marthel Deuan
+Mathenni Mustuir Mur
+Maucheyn
+Meirionnydd
+Meneich
+Meneth Istelan
+Merthir Buceil
+Merthir Clitauc
+Merthir Gerein
+Merthir Gliuis
+Merthir Issiu
+Merthir llan
+Merthir Maches
+Merthir Miwor
+Merthir Onbrit
+Merthir Teemed
+Merthir Teudiric
+Merthyr
+Messur Pritguenn
+Michaelis super Eleye
+Miluc
+Mon
+Morduc
+Morgannwg
+Mur Castell
+Nant Bichan
+Nant Du
+Nant Foss Pluum
+Nant Luit
+Nant Maur
+Nant yr Hen
+Nisien
+Novo Castro
+Oufreu
+Pedecon
+Pen Annwfn
+Pen Claw
+Pen Ho
+Pen Ros
+Pendeulmn
+Penllyn
+Penlucan
+Penmark
+Penn Alth
+Penn Alun
+Penn Arth
+Penn Bre
+Penn Celli Guennuc
+Penn Celli Gulible
+Penn Claud Ismael
+Penn Claud Lyuarch
+Penn Clecir
+Penn Creic
+Penn Hellei
+Penn Ichen
+Penn Luhin Latron
+Penn Onn
+Penn Ros
+Penn Tirch
+Penn Tiuin
+Petresmor
+Pill
+Poher
+Pont Meiniauc
+Porth Halauc
+Porth Isceuin
+Porth Kyry
+Porth Manach Mainaur
+Porth Medgen
+Porth Tulon
+Powys
+Pul Meuric
+Pull Arda
+Pull Iceth
+Pull Mouric
+Pull Neuynn
+Pull Otin Cincenn
+Pull Pennic
+Pull Rud
+Pull Rud Dulin
+Radh
+Radulfi de Nectone
+Radur
+Ragelan
+Rempny
+Retoc
+Rheged
+Rhufoniog
+Rit ar Taroci
+Rit Arvaith
+Rit Iguein
+Rit ir Euic
+Rit ir Onnen
+Rit Lechauc
+Rit Litan
+Rit Nant
+Rit Sinetic
+Riu Brein
+Riu Celli Cintur
+Riu Finion
+Riu Graenauc
+Riu Guorgued
+Riu Merchiau
+Riu Timuil
+Riu Tiuuil
+Ros Cerion
+Ros ir Eithin
+Rotguidou
+Ruisc
+Ruthery
+Sant Breit
+Segan
+Seuan
+Sudebrok
+Sulbiu
+Sulcein
+Sully
+Tal ir Aithnauc
+Tal ir Brinn
+Tavauc
+Tegeingl
+Telich
+Tencu
+Treger
+Ynys Afallach
+Ynys Prydein
+Ystrad
+Ystrad Tywi
+"""

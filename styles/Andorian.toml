@@ -1,0 +1,356 @@
+# A namebook style: example names, and any settings pinned for them.
+
+title = "Andorian"
+description = "Andorians of Andor, with their family names (including the clan forms ch', th', sh' and zh'), from Star Trek's series, films, novels, comics and games, without real English names (from Memory Beta)."
+
+[settings]
+# Pinned settings, for every list. Settings left out are worked out by namebook.
+soft_consonants = false  # CH, KH, TH and the like each count as one letter
+consonant_clusters = []  # letter groups that each count as one consonant
+multi_vowels = false     # ABA, ORO and the like each count as one vowel
+letter_y = "vowel"       # vowel, consonant or semivowel
+letter_u = "vowel"       # vowel or semivowel
+letter_apostrophe = "vowel"  # vowel (the usual choice) or consonant
+letter_hyphen = "consonant"  # consonant (the usual choice) or joint: joins two words, as a space does
+structural = true        # element lengths follow the names
+statistical = true       # common elements are chosen more often
+fit_level = 3            # 0 to 3: how closely neighboring elements must fit
+prefixes = true          # the first two elements come from one name
+suffixes = true          # the last two elements come from one name
+shuffle = false          # middle elements are pooled, whatever their position
+validation_level = 2     # 0 to 2: how strictly letter limits are checked
+refuse_copies = true     # a name that is one of the names below is made again
+markov = "weighted"      # off (building rules alone), weighted or fill (a Markov chain guides the letters)
+markov_strength = 1.0    # 0 to 1: how much the Markov chain counts
+templates = []           # recipe:weight, such as "#:3" or "5'7"; [] for none
+min_length = 0           # fewest letters in a name; 0 for no limit
+max_length = 0           # most letters in a name; 0 for no limit
+punctuation = []         # any of accents (AA as Á), diaeresis (Eärendil), vowel_harmony (Väinö)
+
+[settings.male]
+# Pinned for the list male alone.
+markov_order = 1  # letters the Markov chain looks back, 1 to 5; 0 to work it out
+
+[settings.female]
+# Pinned for the list female alone.
+markov_order = 1  # letters the Markov chain looks back, 1 to 5; 0 to work it out
+
+[settings.surname]
+# Pinned for the list surname alone.
+markov_order = 2  # letters the Markov chain looks back, 1 to 5; 0 to work it out
+
+[names]
+male = """
+Akoval
+Alovar
+Anlenthoris
+Aranthanien
+Astellet
+Bashir
+Beschelcorea
+Ch'Berro
+Ch'Kerrosoth
+Ch'Regda
+Chasinthrof
+Clev
+Collev
+Cray
+D'val
+D'vin
+En
+Eshrine
+Fellaren
+Fesoan
+Finirath
+Gaalen
+Ghee
+Giered
+Gilmesheid
+Hargrev
+Igrilan
+J'mm
+K'ras
+Kebal
+Khenarc
+Krotus
+Larc
+Levak
+Mahirn
+Mashish
+Mekara
+Melchior
+Milius
+Muav
+Namkcots
+Nisverin
+Nomias
+Okenga
+Ortees
+Pov
+R'val
+Rahendervakell
+Ramasanar
+Rasanis
+Salla
+Sanioth
+Schwin
+Sesha
+Setheleyis
+Shaa
+Shanradeskel
+Shantherin
+Shavras
+Shelerib
+Shelithan
+Shev
+Shiarth
+Shras
+Shreff
+Shroom
+Silash
+Sonnisar
+Stoy
+Tavrithinn
+Th'Fairoh
+Th'Pev
+Th'Vraas
+Thak
+Thanatazhres
+Tharia
+Tharlas
+Tharval
+Thavanichent
+Theleb
+Thelenth
+Thelin
+Thev
+Thex
+Thezalden
+Thimon
+Thirishar
+Tholav
+Thonis
+Thress
+Thron
+Thurl
+Thy'kir
+Thy'lek
+Tivra
+Torbish
+Turath
+Tysess
+Va'Kel
+Val
+Vandor
+Veldaclien
+Veni
+Vraath
+Whis
+Yevan
+"""
+
+female = """
+Altheria
+Anishtalla
+Antocadra
+Avaranthi
+Birivallah
+Celerasayna
+Charivretha
+Desma
+Dilat
+Dreva
+Eddon
+Ezrishar
+Gralev
+Hila
+Imaru
+Jenishan
+Jessala
+Kellerasana
+Kellessar
+Kitazoanra
+Lecheb
+Leen
+Lor'Vela
+Lyaas
+Lyndra
+Phelana
+Randishira
+Resthenar
+Satr
+Savaaroa
+Sessethantis
+Sh'Raazn
+Sh'Zenne
+Shathrissia
+Sherivan
+Shey
+Shralla
+Sirta
+Talas
+Talla
+Thala
+Thali
+Thanis
+Thasten
+Themon
+Thrantira
+Thrynn
+Thysis
+Todahlahr
+Torethirala
+Trenkanshent
+Undieela
+Urajel
+Vanda
+Vindizhei
+Vinithnel
+Vrathev
+Ythrilasifsa
+Zh'Ral
+Zh'Vansh
+Zharran
+"""
+
+surname = """
+Aaraka
+Akria
+Arooth
+ch'Evram
+ch'Gesrit
+ch'Gorin
+ch'Lan
+ch'Larn
+ch'Lessa
+ch'Letha
+ch'Lhren
+ch'Menlich
+ch'Mezret
+ch'Nayla
+ch'Nora
+ch'Nuillan
+ch'Pavarzi
+ch'Refel
+ch'Ren
+ch'Revash
+ch'Rhettel
+ch'Riin
+ch'Rin
+ch'Sonnas
+ch'Terren
+ch'Thane
+ch'Theloh
+ch'Vhendreni
+ch'Vrane
+ch'Vrent
+ch'Vress
+ch'Vrun
+Charas
+Claness
+D'Qua
+Ehra
+Endilev
+Fel
+Gzin
+H'unkle
+Haslev
+Ivari
+Ivos
+K'tannan
+K'Tik
+Kanin
+Kor
+Lindalan
+Loctrill
+M'Giia
+Milvin
+Noor
+Nortron
+P'Trell
+Polt
+Roos
+Sarahd
+sh'Dani
+sh'Lan
+sh'Lavan
+sh'Lero
+sh'Lesinas
+sh'Lothas
+sh'Makesh
+sh'Meth
+sh'Mirrin
+sh'Ness
+sh'Nuillan
+sh'Prenni
+sh'Rassa
+sh'Rave
+sh'Regda
+sh'Retsu
+Sh'reyan
+sh'Rothress
+sh'Rraazh
+sh'Sena
+sh'Thyfon
+sh'Vrane
+sh'Zathrosia
+Sharad
+Sharn
+Shavahar
+Sheraan
+Shon
+Shrall
+Shran
+Sirhc
+Stonwin
+T'las
+Talee
+th'Cheen
+th'Chun
+th'Clane
+th'Dani
+th'Lan
+th'Lesinas
+th'Lothas
+th'Menchal
+th'Noor
+th'Priil
+th'Rasdeth
+th'Rithsiria
+th'Shant
+th'Shoras
+th'Talias
+th'Teshinaal
+th'Valrass
+th'Vlene
+th'Vorothishria
+th'Vrent
+th'Vroth
+th'Zaigrel
+th'Zharath
+Thonen
+Threvan
+Trastan
+Verata
+Yudrin
+zh'Azethiq
+zh'Cheen
+zh'Crivash
+zh'Dhaven
+zh'Ethre
+zh'Faila
+zh'Firro
+zh'Lan
+zh'Lessa
+zh'Mai
+zh'Ranthi
+zh'Rhun
+zh'Ruathain
+zh'Tarash
+zh'Thane
+zh'Tran
+zh'Vazdi
+zh'Vethris
+zh'Vres
+zh'Zulis
+"""

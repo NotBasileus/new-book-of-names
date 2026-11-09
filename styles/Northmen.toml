@@ -1,0 +1,187 @@
+# A namebook style: example names, and any settings pinned for them.
+
+title = "Northmen"
+description = "Northmen, the First Men of the North of Westeros, in George R. R. Martin's A Song of Ice and Fire and its histories, without real English names (from A Wiki of Ice and Fire)."
+
+[settings]
+# Pinned settings, for every list. Settings left out are worked out by namebook.
+soft_consonants = false  # CH, KH, TH and the like each count as one letter
+consonant_clusters = []  # letter groups that each count as one consonant
+multi_vowels = false     # ABA, ORO and the like each count as one vowel
+letter_y = "vowel"       # vowel, consonant or semivowel
+letter_u = "vowel"       # vowel or semivowel
+letter_apostrophe = "vowel"  # vowel (the usual choice) or consonant
+letter_hyphen = "consonant"  # consonant (the usual choice) or joint: joins two words, as a space does
+structural = true        # element lengths follow the names
+statistical = true       # common elements are chosen more often
+fit_level = 3            # 0 to 3: how closely neighboring elements must fit
+prefixes = true          # the first two elements come from one name
+suffixes = true          # the last two elements come from one name
+shuffle = false          # middle elements are pooled, whatever their position
+validation_level = 2     # 0 to 2: how strictly letter limits are checked
+refuse_copies = true     # a name that is one of the names below is made again
+markov = "weighted"      # off (building rules alone), weighted or fill (a Markov chain guides the letters)
+markov_strength = 1.0    # 0 to 1: how much the Markov chain counts
+templates = []           # recipe:weight, such as "#:3" or "5'7"; [] for none
+min_length = 0           # fewest letters in a name; 0 for no limit
+max_length = 0           # most letters in a name; 0 for no limit
+punctuation = []         # any of accents (AA as Á), diaeresis (Eärendil), vowel_harmony (Väinö)
+
+[settings.male]
+# Pinned for the list male alone.
+markov_order = 1  # letters the Markov chain looks back, 1 to 5; 0 to work it out
+
+[settings.female]
+# Pinned for the list female alone.
+markov_order = 2  # letters the Markov chain looks back, 1 to 5; 0 to work it out
+
+[names]
+male = """
+Alaric
+Alyn
+Arnolf
+Arthor
+Artos
+Bannen
+Barth
+Barthogan
+Bartimus
+Benfred
+Benjen
+Benjicot
+Bennard
+Beren
+Beron
+Bessa
+Bran
+Byam
+Calon
+Cayn
+Chayle
+Cley
+Cregan
+Cregard
+Daryn
+Denys
+Domeric
+Donnel
+Donnor
+Eddard
+Edwyle
+Ellard
+Elric
+Errold
+Farlen
+Galbart
+Gareth
+Gawen
+Grunt
+Hallis
+Halys
+Hareth
+Harmond
+Harrion
+Harwin
+Heke
+Helman
+Heward
+Hoarfrost
+Hother
+Hullen
+Jeor
+Jojen
+Jonnel
+Jorah
+Jory
+Joseth
+Karlon
+Larence
+Leobald
+Lonnel
+Mallador
+Martyn
+Medger
+Medrick
+Mikken
+Mors
+Murch
+Nage
+Ondrew
+Osric
+Palla
+Porther
+Quent
+Rickard
+Rickon
+Robard
+Robett
+Rodrik
+Rodwell
+Ronnel
+Roose
+Shadd
+Theomore
+Therry
+Timotty
+Tomard
+Torghen
+Torren
+Torrhen
+Tym
+Varly
+Vayon
+Walder
+Wayn
+Wendel
+Willam
+Wyl
+Wylis
+Wynton
+"""
+
+female = """
+Alarra
+Alys
+Alysane
+Alysanne
+Argelle
+Arra
+Arrana
+Arsa
+Arya
+Barba
+Barbrey
+Berena
+Branda
+Dacey
+Donella
+Eddara
+Erena
+Gilliane
+Jessamyn
+Jeyne
+Jez
+Jonelle
+Jorelle
+Lyanna
+Lyanne
+Lyarra
+Lyessa
+Lynara
+Lyra
+Lysa
+Lysara
+Maege
+Marna
+Meera
+Myriah
+Myriame
+Raya
+Sansa
+Sarra
+Shyra
+Sybelle
+Wylla
+Wynafryd
+Zei
+"""

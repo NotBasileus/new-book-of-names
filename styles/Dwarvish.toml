@@ -1,0 +1,135 @@
+# A namebook style: example names, and any settings pinned for them.
+
+title = "Dwarvish"
+description = "Dwarves of Tolkien's Middle-earth and of the Old Norse Völuspá, where Tolkien found their names (from Tolkien Gateway, Eldamo and the Völuspá)."
+
+[settings]
+# Pinned settings. Settings left out are worked out by namebook.
+soft_consonants = false  # CH, KH, TH and the like each count as one letter
+consonant_clusters = []  # letter groups that each count as one consonant
+multi_vowels = false     # ABA, ORO and the like each count as one vowel
+letter_y = "vowel"       # vowel, consonant or semivowel
+letter_u = "vowel"       # vowel or semivowel
+letter_apostrophe = "vowel"  # vowel (the usual choice) or consonant
+letter_hyphen = "consonant"  # consonant (the usual choice) or joint: joins two words, as a space does
+structural = true        # element lengths follow the names
+statistical = true       # common elements are chosen more often
+fit_level = 3            # 0 to 3: how closely neighboring elements must fit
+prefixes = true          # the first two elements come from one name
+suffixes = true          # the last two elements come from one name
+shuffle = false          # middle elements are pooled, whatever their position
+validation_level = 2     # 0 to 2: how strictly letter limits are checked
+refuse_copies = true     # a name that is one of the names below is made again
+markov = "weighted"      # off (building rules alone), weighted or fill (a Markov chain guides the letters)
+markov_order = 1         # letters the Markov chain looks back, 1 to 5; 0 to work it out
+markov_strength = 1.0    # 0 to 1: how much the Markov chain counts
+templates = ["#:101", "# #:1"]  # recipe:weight, such as "#:3" or "5'7"; [] for none
+min_length = 0           # fewest letters in a name; 0 for no limit
+max_length = 0           # most letters in a name; 0 for no limit
+punctuation = []         # any of accents (AA as Á), diaeresis (Eärendil), vowel_harmony (Väinö)
+
+[names]
+male = """
+Ai
+Althjóf
+Anar
+Andvari
+Aurvang
+Austri
+Azaghâl
+Bafur
+Balin
+Bifur
+Bild
+Billing
+Bláin
+Bodruith
+Bofur
+Bombur
+Borin
+Brimir
+Brúni
+Buri
+Burin
+Dori
+Draupnir
+Durin
+Dvalin
+Dwalin
+Dáin
+Dólgthrasir
+Dúf
+Eikinskjaldi
+Fangluin
+Farin
+Felakgundu
+Finn
+Fjalar
+Flói
+Forn
+Fraeg
+Frerin
+Frosti
+Frár
+Frór
+Fundin
+Fíli
+Gamil Zirak
+Gimli
+Ginnar
+Glóin
+Gróin
+Grór
+Hanar
+Hannar
+Haugspori
+Hepti
+Hlévang
+Hornbori
+Hár
+Ibun
+Jari
+Khîm
+Kíli
+Lit
+Lofar
+Lóni
+Mjodvitnir
+Mîm
+Módsognir
+Nar
+Narvi
+Naugladur
+Nidi
+Nordri
+Nori
+Náin
+Náli
+Níping
+Nýi
+Nýr
+Nýrád
+Ori
+Regin
+Rádsvid
+Skafid
+Skirfir
+Sudri
+Svíur
+Telchar
+Thekk
+Thorin
+Thráin
+Thrár
+Thrór
+Vegg
+Vestri
+Vili
+Vindálf
+Virfir
+Vit
+Yngvi
+Álf
+Án
+Óin
+"""

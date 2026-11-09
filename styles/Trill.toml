@@ -1,0 +1,250 @@
+# A namebook style: example names, and any settings pinned for them.
+
+title = "Trill"
+description = "Trill of the planet Trill, with their family names and symbiont names (Dax), from Star Trek's series, films, novels, comics and games, without real English names (from Memory Beta)."
+
+[settings]
+# Pinned settings, for every list. Settings left out are worked out by namebook.
+soft_consonants = false  # CH, KH, TH and the like each count as one letter
+consonant_clusters = []  # letter groups that each count as one consonant
+multi_vowels = false     # ABA, ORO and the like each count as one vowel
+letter_y = "vowel"       # vowel, consonant or semivowel
+letter_u = "vowel"       # vowel or semivowel
+letter_apostrophe = "vowel"  # vowel (the usual choice) or consonant
+letter_hyphen = "consonant"  # consonant (the usual choice) or joint: joins two words, as a space does
+structural = true        # element lengths follow the names
+statistical = true       # common elements are chosen more often
+fit_level = 3            # 0 to 3: how closely neighboring elements must fit
+prefixes = true          # the first two elements come from one name
+suffixes = true          # the last two elements come from one name
+shuffle = false          # middle elements are pooled, whatever their position
+validation_level = 2     # 0 to 2: how strictly letter limits are checked
+refuse_copies = true     # a name that is one of the names below is made again
+markov = "weighted"      # off (building rules alone), weighted or fill (a Markov chain guides the letters)
+markov_order = 1         # letters the Markov chain looks back, 1 to 5; 0 to work it out
+markov_strength = 1.0    # 0 to 1: how much the Markov chain counts
+templates = []           # recipe:weight, such as "#:3" or "5'7"; [] for none
+min_length = 0           # fewest letters in a name; 0 for no limit
+max_length = 0           # most letters in a name; 0 for no limit
+punctuation = []         # any of accents (AA as Á), diaeresis (Eärendil), vowel_harmony (Väinö)
+
+[names]
+male = """
+Anjad
+Arjin
+Aylim
+Azon
+Baleeza
+Bethan
+Brinner
+Curzon
+Damar
+Dapo
+Darzen
+Dega
+Deilas
+Doyos
+Duhan
+Enjana
+Enrak
+Etom
+Farik
+Farin
+Faro
+Foris
+Gohod
+Goran
+Gradak
+Grala
+Hiziki
+Hodak
+Hosc
+Illia
+Jarem
+Jas
+Jayvin
+Jelim
+Jenk
+Jirin
+Joran
+Jorel
+Jovar
+Kal
+Keb
+Kebil
+Keeten
+Kejjis
+Kela
+Koal
+Kov
+Lytus
+Malak
+Nareeya
+Norvo
+Pran
+Raifi
+Raka
+Rantic
+Ranul
+Roka
+Rylen
+Seljin
+Senna
+Shurl
+Sitlas
+Stijen
+Tal
+Taulin
+Timor
+Torias
+Tornellen
+Trebor
+Vadel
+Verad
+Verjyl
+Yedrin
+Yolad
+"""
+
+female = """
+Arzia
+Asal
+Audrid
+Behza
+Brexen
+Cretia
+Dax
+Dula
+Elent
+Elra
+Elta
+Emony
+Emra
+Ezri
+Gossia
+Hennene
+Hilar
+Jadzia
+Janra
+Jira
+Jix
+Jozell
+Kareel
+Kasha
+Kell
+Kyethn
+Lela
+Lenara
+Lirisse
+Lyrrin
+Madza
+Maurita
+Mehta
+Milayn
+Moll
+Nas
+Neema
+Nelenne
+Nilani
+Nili
+Ozla
+Radara
+Rame
+Renhol
+Ryzen
+Seng
+Silvet
+Sisra
+Temzia
+Toshin
+Vanah
+Vara
+Vianu
+Yanas
+Yianem
+Ziranne
+"""
+
+surname = """
+Abrik
+Belar
+Beldon
+Bok
+Bral
+Bren
+Clif
+Cyl
+Dastin
+Dax
+Dev
+Ditrel
+Dorson
+Edsilar
+Enor
+Fal
+Finok
+Gandres
+Gard
+Gral
+Graniv
+Gren
+Grof
+Hajan
+Idaris
+Ijoula
+Jal
+Kahn
+Kalon
+Kaul
+Kaz
+Keru
+Ketcherside
+Koas
+Kodell
+Kotay
+Lan
+Lef
+Lexen
+Lors
+Lox
+Maz
+Nar
+Niecta
+Nirenn
+Odan
+Perim
+Planx
+Prit
+Rama
+Rianu
+Roa
+Sagado
+Seng
+Sevos
+Siddon
+Sil
+Sobel
+T'Mar
+Tal
+Talris
+Tambor
+Tanj
+Tem
+Tigan
+Tohm
+Tol
+Torvin
+Trin
+Tul
+Val
+VanZyl
+Vess
+Vet
+Vod
+Vos
+Yed
+Yol
+Zak
+Zi
+Zund
+"""

@@ -1,0 +1,2770 @@
+# A namebook style: example names, and any settings pinned for them.
+
+title = "Old Irish"
+description = "Names of early medieval Ireland and its myths, about 400 to 1170 (from the Irish annals, Lady Gregory's retellings and Wikidata)."
+
+[settings]
+# Pinned settings, for every list. Settings left out are worked out by namebook.
+soft_consonants = false  # CH, KH, TH and the like each count as one letter
+consonant_clusters = []  # letter groups that each count as one consonant
+multi_vowels = false     # ABA, ORO and the like each count as one vowel
+letter_y = "vowel"       # vowel, consonant or semivowel
+letter_u = "vowel"       # vowel or semivowel
+letter_apostrophe = "vowel"  # vowel (the usual choice) or consonant
+structural = true        # element lengths follow the names
+statistical = true       # common elements are chosen more often
+fit_level = 3            # 0 to 3: how closely neighboring elements must fit
+prefixes = true          # the first two elements come from one name
+suffixes = true          # the last two elements come from one name
+shuffle = false          # middle elements are pooled, whatever their position
+validation_level = 2     # 0 to 2: how strictly letter limits are checked
+refuse_copies = true     # a name that is one of the names below is made again
+markov = "weighted"      # off (building rules alone), weighted or fill (a Markov chain guides the letters)
+markov_strength = 1.0    # 0 to 1: how much the Markov chain counts
+min_length = 0           # fewest letters in a name; 0 for no limit
+max_length = 0           # most letters in a name; 0 for no limit
+punctuation = []         # any of accents (AA as Á), diaeresis (Eärendil), vowel_harmony (Väinö)
+
+[settings.male]
+# Pinned for the list male alone.
+letter_hyphen = "consonant"  # consonant (the usual choice) or joint: joins two words, as a space does
+markov_order = 3  # letters the Markov chain looks back, 1 to 5; 0 to work it out
+templates = []    # recipe:weight, such as "#:3" or "5'7"; [] for none
+
+[settings.female]
+# Pinned for the list female alone.
+letter_hyphen = "consonant"  # consonant (the usual choice) or joint: joins two words, as a space does
+markov_order = 3  # letters the Markov chain looks back, 1 to 5; 0 to work it out
+templates = []    # recipe:weight, such as "#:3" or "5'7"; [] for none
+
+[settings.surname]
+# Pinned for the list surname alone.
+letter_hyphen = "consonant"  # consonant (the usual choice) or joint: joins two words, as a space does
+markov_order = 3  # letters the Markov chain looks back, 1 to 5; 0 to work it out
+templates = ["#:216", "# #:392"]  # recipe:weight, such as "#:3" or "5'7"; [] for none
+
+[settings.place]
+# Pinned for the list place alone.
+letter_hyphen = "joint"  # consonant (the usual choice) or joint: joins two words, as a space does
+markov_order = 4         # letters the Markov chain looks back, 1 to 5; 0 to work it out
+templates = ["#:253", "#-#:594", "#-#-#:127", "#-#-#-#:26"]  # recipe:weight, such as "#:3" or "5'7"; [] for none
+
+[names]
+male = """
+Abarthach
+Adamair
+Aebinn
+Aed
+Aedacan
+Aedagan
+Aedan
+Aedgal
+Aedh
+Aeduar
+Aelgal
+Aengus
+Agda
+Ailell
+Ailgenan
+Ailgil
+Ailill
+Aillen
+Aimergin
+Aimirgin
+Ainbcellach
+Ainbchellach
+Ainbith
+Aindiles
+Ainle
+Ainmire
+Ainmuire
+Ainniarraid
+Airechtach
+Airemon
+Airmedach
+Airtri
+Aithechda
+Aitith
+Amalgaid
+Amergin
+Andela
+Anfith
+Angus
+Anluan
+Anmchad
+Anmchaid
+Anrothan
+Aodh
+Aonghus
+Ardan
+Ardgal
+Ardgar
+Art
+Artagan
+Artan
+Artrach
+Artri
+Augaire
+Badarn
+Badbchad
+Baedan
+Baeithin
+Baetan
+Baeth
+Baigellain
+Baile
+Bainblai
+Baithene
+Balor
+Barith
+Beag
+Becan
+Becc
+Beccan
+Bece
+Beg
+Belach
+Beoan
+Berach
+Berngal
+Betach
+Betha
+Bith
+Blathmac
+Bodb
+Bodbchad
+Boite
+Braein
+Braen
+Bran
+Branan
+Brandub
+Bratha
+Brec
+Bremen
+Brenainn
+Brenan
+Brenann
+Brendan
+Breogan
+Bres
+Bresal
+Bressal
+Brian
+Bricriu
+Brion
+Brocan
+Broen
+Brogarban
+Bruadar
+Bruatar
+Bruidge
+Buac
+Buadach
+Buide
+Buinne
+Caech
+Caem
+Caeman
+Caenchomrac
+Caencomrac
+Caicher
+Cailech
+Caille
+Cailte
+Caincenn
+Caindelbain
+Caindelban
+Cainte
+Cairbre
+Cairell
+Cairill
+Cairpre
+Cairpri
+Cam
+Canannan
+Cano
+Caoilte
+Carnen
+Carrach
+Carthach
+Cas
+Casan
+Cathaeir
+Cathair
+Cathal
+Cathalan
+Cathan
+Catharnach
+Cathasach
+Cathassach
+Cathbad
+Cathmann
+Cathrannach
+Cathub
+Cathusach
+Cathussach
+Ceilechair
+Ceinneidig
+Ceinnselach
+Ceithernach
+Cele
+Celechan
+Celechar
+Celedabaill
+Celegan
+Cellach
+Cellachan
+Cellan
+Celtchar
+Celthair
+Cemach
+Cenneidig
+Cennetig
+Cennfaelad
+Cennselach
+Cerball
+Cernach
+Cernachan
+Cerr
+Cet
+Cethern
+Cethernach
+Cian
+Ciarda
+Ciarmac
+Cillene
+Cilline
+Cimbaeth
+Cinadon
+Cinaed
+Cinaeth
+Cinneidig
+Claen
+Cleirchen
+Cleirech
+Clerchen
+Clothna
+Cobthach
+Coibdenach
+Coirpre
+Coirpri
+Colcu
+Colga
+Colggu
+Colgu
+Colla
+Collbrain
+Colman
+Comaltan
+Coman
+Comgall
+Comgan
+Comsud
+Conaillech
+Conaing
+Conaire
+Conall
+Conallan
+Conamail
+Conan
+Conang
+Conchad
+Conchaille
+Conchobar
+Conchubar
+Concobar
+Cond
+Condalach
+Condla
+Condmach
+Conga
+Congaile
+Congal
+Congalach
+Congaltach
+Congus
+Conloingeas
+Conmael
+Conn
+Connad
+Connalach
+Connla
+Connmach
+Conra
+Conroi
+Corb
+Corcran
+Cormac
+Coscrach
+Cosgrach
+Credne
+Cremthainne
+Cremthann
+Crichan
+Crimthan
+Crimthann
+Crinan
+Crither
+Crom
+Cronan
+Crundmael
+Crunn
+Crunnmael
+Cuan
+Cuanach
+Cuanu
+Cubretan
+Cucaille
+Cucenain
+Cucherca
+Cuchongalt
+Cuchuaran
+Cuchulain
+Cucoirne
+Cucollchaille
+Cucongalt
+Cuconnacht
+Cudinaisc
+Cuduilig
+Cugamna
+Cuilen
+Cuilennan
+Cuilinn
+Cuirc
+Cumara
+Cumascach
+Cumasgach
+Cumeda
+Cumhal
+Cummaene
+Cummascach
+Cummeni
+Cumuscach
+Curnan
+Curoi
+Cuulad
+Dagda
+Daig
+Daire
+Dairi
+Dalach
+Dalbh
+Dallan
+Daman
+Dargart
+Dathi
+Dearg
+Delbaeth
+Delga
+Deman
+Demman
+Derg
+Dian
+Diancecht
+Diarmaid
+Diarmait
+Diarmuid
+Dithorba
+Dluthach
+Dobailen
+Doche
+Dogra
+Domangart
+Domnall
+Domnallain
+Donagan
+Dongal
+Donn
+Donnaban
+Donnacan
+Donnagan
+Donnchad
+Donnchuan
+Donncothaid
+Donncuan
+Donnduban
+Donngal
+Donnog
+Donnsleibe
+Donnuban
+Donog
+Dorbene
+Dremen
+Duach
+Dub
+Duban
+Dubcalgaid
+Dubda
+Dubdabairenn
+Dubdaboirenn
+Dubdachrich
+Dubdainber
+Dubdaleithe
+Dubdalethe
+Dubdara
+Dubdiberg
+Dubduin
+Dubgall
+Dubgilla
+Dubindrecht
+Dublachtna
+Dublongsech
+Dubslanga
+Dubthach
+Dubtuinne
+Duibcenn
+Duibdara
+Duibdrenn
+Duibgilla
+Duibhne
+Duibinnrecht
+Duilgen
+Dunadach
+Dunan
+Duncath
+Dunchad
+Dunchu
+Duncuan
+Dungal
+Dungalach
+Dunlaing
+Dunlang
+Durthacht
+Eacha
+Eagallach
+Eagra
+Eber
+Echa
+Echaid
+Echmarcach
+Echtgus
+Echthigern
+Echtigern
+Echu
+Ederscel
+Edersgel
+Egcertach
+Egertach
+Egnech
+Eicnech
+Eignech
+Eignechan
+Eimin
+Eladach
+Elatha
+Elathan
+Elcmar
+Elim
+Elothach
+Enda
+Enna
+Eocha
+Eochagan
+Eochaid
+Eocho
+Eochocan
+Eochu
+Eogan
+Eoghan
+Eolais
+Eonan
+Ere
+Eremon
+Ernaine
+Erudan
+Etar
+Eterscel
+Ethal
+Etigen
+Etirscel
+Eugan
+Facen
+Fachna
+Fachtna
+Faelan
+Faelchar
+Faelchu
+Faelgus
+Failbe
+Falloman
+Fallomon
+Faolan
+Fatheman
+Febal
+Fechtnach
+Fedach
+Fedelmid
+Fedlimid
+Feidlim
+Feidlimid
+Feradach
+Ferall
+Ferchar
+Fercorb
+Ferda
+Ferdacrich
+Ferdalach
+Ferdana
+Ferdiad
+Ferdomnach
+Fergaile
+Fergal
+Fergna
+Fergnae
+Fergno
+Fergraid
+Fergus
+Fethgna
+Fiacha
+Fiachna
+Fiachnae
+Fiachra
+Fiachu
+Fianamail
+Fiangalach
+Fiangus
+Fiannamail
+Fidach
+Finachta
+Finan
+Fincath
+Fingen
+Fingin
+Finguine
+Finn
+Finnachta
+Finnbarr
+Finnchad
+Finnguine
+Finnliath
+Finnsnechta
+Finntan
+Finsnechta
+Fintan
+Fionn
+Firaba
+Fithcellach
+Flaithbertach
+Flaithem
+Flaithnia
+Flaithniad
+Flaithri
+Fland
+Flann
+Flannabra
+Flannacan
+Flannagan
+Flannchad
+Flathrai
+Flathroe
+Focarta
+Fogarta
+Fogartach
+Foill
+Foith
+Follamain
+Follaman
+Forannan
+Forbasach
+Forbassach
+Forgall
+Forggus
+Fothad
+Fraech
+Furadran
+Furudran
+Gabran
+Gadra
+Gaeithin
+Gairbith
+Garb
+Garban
+Gartnan
+Gebennach
+Gede
+Geibennach
+Geirgind
+Gerg
+Giblechan
+Gillaaengus
+Gillabrenainn
+Gillabrigde
+Gillacaeimgin
+Gillacellaig
+Gillachellaig
+Gillachiarain
+Gillachrist
+Gillaciarain
+Gillacoluim
+Gillacomgaill
+Gillacommain
+Gillacrist
+Gillafin
+Gillagori
+Gillamacliag
+Gillamaire
+Gillamocholmog
+Gillamochonna
+Gillapadraig
+Gillapatraic
+Gillaphadraig
+Gillasechnaill
+Glas
+Glethnechan
+Glundub
+Gluniarn
+Goibniu
+Goll
+Gormgal
+Grigair
+Guaire
+Guana
+Gulban
+Gusan
+Heremon
+Iarlaithe
+Idath
+Ilbrec
+Ildathach
+Illann
+Indech
+Indrechtach
+Innatmar
+Innrechtach
+Inrechtach
+Irgalach
+Ith
+Iuchar
+Iucharba
+Labraid
+Lachtin
+Lachtnan
+Ladgnen
+Ladra
+Laeg
+Laegachain
+Laegaire
+Laidcenn
+Laidcnen
+Laidgnen
+Laigne
+Laisren
+Lasren
+Leocain
+Leran
+Lergus
+Lethlabar
+Lethlobar
+Liath
+Lir
+Lochlainn
+Lodan
+Loegaire
+Loingsech
+Lon
+Lonan
+Lorcan
+Luachan
+Luchta
+Lugaid
+Lugh
+Lughaid
+Macaod
+Macbethaid
+Maccairthinn
+Maccecht
+Macdomnaill
+Machainen
+Macleiginn
+Macnia
+Macniad
+Madadan
+Madagan
+Madudan
+Maelan
+Maelbracha
+Maelbrenainn
+Maelbresail
+Maelbressail
+Maelbrigde
+Maelbrigte
+Maelcaurarda
+Maelchiarain
+Maelciarain
+Maelcluiche
+Maelcoba
+Maelcobo
+Maelcoluim
+Maelcothaig
+Maelcron
+Maeldoid
+Maeldorai
+Maeldoraid
+Maelduin
+Maelechlainn
+Maeleitig
+Maeleoin
+Maelfabaill
+Maelfinnia
+Maelfithrich
+Maelfithrig
+Maelfothartaig
+Maelfuataig
+Maelgarb
+Maelgorm
+Maelisa
+Maelisu
+Maelmaedog
+Maelmartain
+Maelmiadaig
+Maelmithid
+Maelmocheirge
+Maelmoicheirge
+Maelmorda
+Maelmorra
+Maelmuad
+Maelmuire
+Maelodar
+Maelpadraig
+Maelpatraic
+Maelpedair
+Maelruain
+Maelruanaid
+Maelruba
+Maelsechlainn
+Maelsechnaill
+Maelsinchill
+Maelsuthan
+Maelteimin
+Maeltuile
+Maeluidir
+Maeluma
+Maelumai
+Maen
+Maenach
+Maengal
+Magach
+Mai
+Maicniad
+Maine
+Manannan
+Manchain
+Mane
+Mannachan
+Maolmuire
+Maoltuile
+Marcan
+Matadan
+Mathgamain
+Matudan
+Meith
+Menn
+Miach
+Midhir
+Midhna
+Midir
+Mil
+Miled
+Milid
+Mochoe
+Mochoemoc
+Mochta
+Mod
+Modcorb
+Moenach
+Molt
+Mongan
+Morann
+Morda
+Morgair
+Morna
+Morrog
+Mothla
+Mugroin
+Mugron
+Muinderg
+Muinemon
+Muinremar
+Muirchertach
+Muirecan
+Muiredach
+Muiregan
+Muirges
+Muirgis
+Muirgius
+Muirgus
+Muirigen
+Murcha
+Murchad
+Murchadan
+Murchadh
+Murgal
+Murrog
+Nadfraech
+Naoise
+Nargal
+Nath
+Nathi
+Nechtan
+Neid
+Neimid
+Neit
+Nellin
+Nemed
+Nemhnain
+Nia
+Niall
+Niallgus
+Ninnid
+Niul
+Nois
+Nuada
+Nuadat
+Ocan
+Octriallach
+Odar
+Odran
+Oenacan
+Oengus
+Ogma
+Oilill
+Oilioll
+Oirdnide
+Oisin
+Oistin
+Olchobar
+Olcobar
+Ollam
+Olum
+Onchu
+Oscar
+Osgar
+Ossene
+Osseni
+Partholon
+Ragallach
+Rechtabra
+Remar
+Riagan
+Rian
+Riangabra
+Rigbardan
+Rigderg
+Rigdond
+Roan
+Robartach
+Rochad
+Rochraide
+Roen
+Rogallach
+Rogh
+Roig
+Roin
+Ronan
+Rond
+Rossa
+Ruad
+Ruadacan
+Ruadan
+Ruadh
+Ruadrach
+Ruadri
+Ruaidri
+Ruairc
+Ruamlus
+Rudraige
+Saerbrethach
+Saergus
+Saran
+Scannal
+Scannall
+Scannlan
+Scolaige
+Sechnasach
+Sechnassach
+Sedna
+Segene
+Selbach
+Senan
+Sencha
+Senchan
+Setanta
+Setna
+Siadal
+Sinach
+Sirna
+Sithrige
+Slaine
+Slanoll
+Sleibine
+Sochlachan
+Soergus
+Spelan
+Sreng
+Suairlech
+Sualtim
+Suanach
+Suibne
+Suigde
+Tadc
+Tadg
+Taichlech
+Tailc
+Tairrdelbach
+Tethra
+Tibraide
+Tigernach
+Tigernan
+Tigernmas
+Tipraiti
+Tnuthgal
+Toichlech
+Toirdelbach
+Tomaltach
+Tommaltach
+Torbach
+Torpaid
+Treon
+Tresach
+Tuaimsnama
+Tuathal
+Tuathchar
+Tuireann
+Uada
+Ualgarg
+Uargal
+Uathmaran
+Uatu
+Uchtan
+Ugaine
+Ugaire
+Uillenn
+Ultan
+Urard
+Urchad
+Usnach
+Uthecar
+"""
+
+female = """
+Achtan
+Aebgreine
+Aeibenn
+Affraic
+Aideen
+Aige
+Ailbe
+Ailbhe
+Aillinn
+Ailne
+Aine
+Anu
+Aobh
+Aoife
+Athracht
+Badb
+Baine
+Banba
+Beara
+Bebind
+Bebinn
+Bec
+Bechuille
+Becuma
+Befail
+Befall
+Benmide
+Birog
+Blanad
+Blanaid
+Boann
+Briga
+Brigid
+Brigit
+Bronach
+Buan
+Cacht
+Caellaige
+Caer
+Cailb
+Cainech
+Carman
+Ceithlenn
+Cera
+Cessair
+Cethlenn
+Cleena
+Cliodhna
+Clothru
+Cnes
+Cobflaith
+Coblaith
+Coincheann
+Coinchenn
+Condal
+Core
+Credhe
+Cron
+Cruife
+Cumman
+Dailfinn
+Daireann
+Danann
+Danu
+Darerca
+Darlugdach
+Dechtire
+Deirdre
+Deoch
+Derbail
+Derbfail
+Derbforgaill
+Dianim
+Donlaith
+Dubchablaig
+Dubchoblaig
+Dubessa
+Dublemna
+Duiblemna
+Duinsech
+Duisech
+Dunflaith
+Dunlaith
+Ebliu
+Echtge
+Eithlenn
+Eithne
+Eithni
+Emer
+Enchenn
+Englic
+Ere
+Ergnata
+Eri
+Eriu
+Erne
+Ernmas
+Etain
+Ethlinn
+Ethne
+Ethniu
+Fanche
+Fand
+Fea
+Fedelm
+Feithline
+Ferb
+Fethnaid
+Fial
+Fiall
+Fin
+Finbil
+Findabair
+Findchoem
+Finnchoem
+Finola
+Fionnchaem
+Fionnuala
+Flann
+Flidais
+Fodhla
+Fodla
+Forbflaith
+Gnothnat
+Gobnait
+Gormflaith
+Gormlaith
+Grania
+Grian
+Inderb
+Ite
+Land
+Lann
+Lebarcham
+Lendabair
+Liban
+Ligach
+Luan
+Macha
+Maelcorce
+Maeletig
+Maelfebal
+Maelmaire
+Maelmeda
+Maelmuire
+Maer
+Medb
+Miluchradh
+Mongfind
+Mongruad
+Mongtinn
+Moninne
+Mor
+More
+Moriat
+Morrigan
+Morrigu
+Mugain
+Muirenn
+Muirgel
+Muirne
+Murenn
+Murgel
+Murna
+Nemain
+Nemaind
+Ness
+Niam
+Niamh
+Odba
+Oebinn
+Oentle
+Ogarmach
+Ormaith
+Rignach
+Roignech
+Sadb
+Samair
+Samthann
+Saraid
+Scathach
+Scota
+Sebdann
+Selblaith
+Setach
+Sin
+Sinann
+Sithmaith
+Soerlaith
+Taileflaith
+Taillte
+Taillti
+Tailtiu
+Tea
+Tlachtga
+Tomnat
+Tuag
+Tuathlaithe
+Tuileflaith
+Tuilelaith
+Uaine
+Uaisle
+Uaislen
+Uallach
+Uathach
+"""
+
+surname = """
+Achadbo
+Achadcinn
+Aidne
+Ailech
+Airceltair
+Airgiall
+Airgialla
+Airtherlife
+Almain
+Almuin
+Arad
+Ardag
+Ardbrecain
+Ardcianachta
+Ardcorann
+Ardmacha
+Ardmicrime
+Ardsratha
+Athcliath
+Athdara
+Athnacroise
+Athrois
+Athsige
+Athtruim
+Baslec
+Belachlechta
+Belachmugna
+Benchor
+Bennchair
+Biror
+Birra
+Breg
+Brega
+Bregmaine
+Breifne
+Caisel
+Calatruim
+Calraige
+Carnailche
+Carnfiachach
+Casell
+Casill
+Cellosnaid
+Cenannas
+Cenannus
+Cenel Aeda
+Cenel Ardgail
+Cenel Artgail
+Cenel Binnig
+Cenel Bogaine
+Cenel Cairbre
+Cenel Coirpre
+Cenel Coirpri
+Cenel Comgaill
+Cenel Conaill
+Cenel Duachain
+Cenel Enda
+Cenel Enna
+Cenel Eogain
+Cenel Feradaig
+Cenel Fergusa
+Cenel Fiachach
+Cenel Fiachrach
+Cenel Gabrain
+Cenel Laegaire
+Cenel Loegaire
+Cenel Lugdach
+Cenel Luigdech
+Cenel Maelche
+Cenel Moain
+Cenel Moein
+Cenneich
+Cennfebrat
+Cennfuait
+Cianacht
+Cianachta
+Cianachtabreg
+Ciarraige
+Cillachaid
+Cilldalua
+Cilldara
+Cilldumaglinn
+Cillmona
+Cilltoma
+Clann Bresail
+Clann Carthaig
+Clann Cathail
+Clann Cellaig
+Clann Colmain
+Clann Colman
+Clann Conchobair
+Clann Coscraig
+Clann Cuinn
+Clann Diarmada
+Clann Fiangusa
+Clann Flaithbertaig
+Clann Maelugra
+Clann Murchada
+Clann Scannlain
+Clann Sinaig
+Clann Tomaltaig
+Clann Uadach
+Cluainbronaig
+Cluaincrema
+Cluaindolcain
+Cluaineidnech
+Cluainferta
+Cluainfota
+Cluainiraird
+Cluainmicnois
+Cluaintarb
+Cluainuama
+Coba
+Conaille
+Conailli
+Condere
+Conmacne
+Conmaicne
+Corand
+Corann
+Corcach
+Corcachmor
+Corcmodruad
+Corcu Baiscinn
+Corcu Duibne
+Corcu Firtri
+Corcu Laigde
+Corcu Loigde
+Corcu Modruad
+Corcu Moga
+Corcu Raide
+Corcu Roide
+Cremthainn
+Cuilconaire
+Cuirrech
+Culdreimne
+Daiminis
+Daimliacc
+Daimliag
+Dairecalgaig
+Dairmag
+Dal Araide
+Dal Buinne
+Dal Cais
+Dal Fiatach
+Dal Riada
+Dal Riata
+Dalriada
+Damderg
+Dartraige
+Deisi
+Delbna
+Delbnabethra
+Delbnaeathra
+Delbnamor
+Derlas
+Dermach
+Dermag
+Detna
+Doimliacc
+Doirechalgaig
+Domnachmor
+Druimcara
+Druimcliab
+Druimdergaige
+Druimfornocht
+Druimmor
+Druimrig
+Drung
+Dumaachir
+Dunbolg
+Dunlethglaise
+Dunlethglaisi
+Dunmasc
+Durlas
+Echdruim
+Echros
+Eile
+Eoganacht Caisil
+Eoganacht Locha
+Eonacht
+Fermanach
+Ferna
+Fernmag
+Fidnacha
+Finnabair
+Finnabairaba
+Fir Arda
+Fir Bile
+Fir Cul
+Fir Droma
+Fir Feini
+Fir Li
+Fir Luirg
+Fir Maige
+Fir Manach
+Fir Rois
+Fir Tulach
+Fobar
+Forcalad
+Fremain
+Fremonn
+Gabra
+Gailenga
+Galeng
+Geisill
+Glaisnoide
+Glenndalocha
+Granairet
+Imlechibair
+Inisbofinne
+Iniscaindega
+Iniscathaig
+Inisclothrann
+Inisdoimle
+Irluachair
+Laeigis
+Laigis
+Lannleire
+Leithglenn
+Leithglinn
+Lethchathail
+Lethchuinn
+Lethirbe
+Linnduachail
+Lismor
+Lisoiged
+Lochcre
+Lochgabar
+Lothra
+Luachair
+Lugmad
+Luigne
+Luimnech
+Lurg
+Lusca
+Mac Aengusa
+Mac Amalgada
+Mac Art
+Mac Betha
+Mac Branain
+Mac Branan
+Mac Caille
+Mac Carthaig
+Mac Cerbaill
+Mac Cochlain
+Mac Con
+Mac Conchaille
+Mac Crimthainn
+Mac Cuilennain
+Mac Cuilinn
+Mac Cuinn
+Mac Duach
+Mac Earca
+Mac Eitigen
+Mac Faelain
+Mac Flannchada
+Mac Gabrain
+Mac Gillamocholmog
+Mac Gillapatraic
+Mac Gillaphadraig
+Mac Gillasechnaill
+Mac Gormain
+Mac Lochlainn
+Mac Magach
+Mac Murcha
+Mac Murchada
+Mac Nechtain
+Mac Ronain
+Mac Selbachain
+Mac Senain
+Mac Taidg
+Mac Tuathail
+Magailbe
+Magbile
+Maglena
+Magluirg
+Magmucruime
+Magochtair
+Magtuired
+Mainistir
+Manistirbuiti
+Moindoire
+Moinmor
+Muaid
+Mugdorn
+Mugdorna
+Mugorn
+Mungairid
+Mungairit
+Muscraige
+Ocha
+Oilech
+Oirgialla
+Osraige
+Osraigi
+Portlairge
+Rechra
+Rechrainn
+Rosailithir
+Roscomain
+Roscommain
+Roscre
+Saigir
+Saithne
+Segais
+Sentreb
+Sil Anmchada
+Sil Briain
+Sil Cathail
+Sil Dluthaig
+Sil Maelruain
+Sil Maelruanaid
+Sil Muiredaig
+Sil Ronain
+Slemain
+Tailltin
+Tamlacht
+Tarach
+Tarag
+Telach
+Telachog
+Temair
+Tethba
+Tirdaglas
+Tortan
+Treoit
+Tuaimgreine
+Tuathluigne
+Ua Baigellain
+Ua Baillen
+Ua Bileoice
+Ua Braein
+Ua Brain
+Ua Briain
+Ua Bruadair
+Ua Buide
+Ua Caemain
+Ua Caindelbain
+Ua Cairellain
+Ua Cairill
+Ua Canannain
+Ua Carraig
+Ua Carthaig
+Ua Cathail
+Ua Cathain
+Ua Cathalain
+Ua Catharnaig
+Ua Cathasaig
+Ua Ceilechair
+Ua Ceinneidig
+Ua Cele
+Ua Celechain
+Ua Cellachain
+Ua Cellaig
+Ua Cerbaill
+Ua Cernachain
+Ua Cernaig
+Ua Ciarda
+Ua Ciarmaic
+Ua Cillene
+Ua Cinaeda
+Ua Cleircein
+Ua Cleirig
+Ua Colla
+Ua Colmain
+Ua Commain
+Ua Conaill
+Ua Conaing
+Ua Concenainn
+Ua Concennainn
+Ua Conchaille
+Ua Conchobair
+Ua Congaile
+Ua Congalaig
+Ua Corcrain
+Ua Cormaic
+Ua Crichain
+Ua Crichiden
+Ua Cruimthir
+Ua Crunnmaeil
+Ua Cuilennain
+Ua Cuinn
+Ua Cuirc
+Ua Dalaig
+Ua Domnaill
+Ua Domnallain
+Ua Donnacain
+Ua Donnagain
+Ua Donnchada
+Ua Dubain
+Ua Dubda
+Ua Dubthaig
+Ua Duibdara
+Ua Duinechda
+Ua Duinn
+Ua Dunadaig
+Ua Dunain
+Ua Dunchada
+Ua Dungalaig
+Ua Dungalain
+Ua Faelain
+Ua Failbe
+Ua Fergail
+Ua Fergaile
+Ua Fiachna
+Ua Fiachrach
+Ua Finn
+Ua Finnallain
+Ua Flainn
+Ua Flaithbertaig
+Ua Flaithen
+Ua Flaithri
+Ua Flannacain
+Ua Flannagain
+Ua Flannchada
+Ua Flathrai
+Ua Floinn
+Ua Fogarta
+Ua Fogartaig
+Ua Follamain
+Ua Forannain
+Ua Gadra
+Ua Goirmledaig
+Ua Gormain
+Ua Guaire
+Ua Innascaig
+Ua Lachtnain
+Ua Laegachain
+Ua Laidgnen
+Ua Lapain
+Ua Leocain
+Ua Leochain
+Ua Lethlobair
+Ua Liathain
+Ua Lochlainn
+Ua Loingsig
+Ua Lonain
+Ua Longain
+Ua Lorcain
+Ua Machainen
+Ua Macliag
+Ua Madadain
+Ua Maelbrenainn
+Ua Maelbrigde
+Ua Maeldoraid
+Ua Maelduin
+Ua Maelechlainn
+Ua Maeleoin
+Ua Maelfabaill
+Ua Maelmiadaig
+Ua Maelmide
+Ua Maelmuire
+Ua Maelruain
+Ua Maelruanaid
+Ua Maelsechlainn
+Ua Maelsechnaill
+Ua Maenaig
+Ua Manchain
+Ua Mannachain
+Ua Morain
+Ua Morda
+Ua Morgair
+Ua Mugroin
+Ua Muirchertaig
+Ua Muiredaig
+Ua Muiregain
+Ua Murchada
+Ua Niallain
+Ua Nuadat
+Ua Ragallaig
+Ua Rebachain
+Ua Riagain
+Ua Riain
+Ua Rinn
+Ua Robartaig
+Ua Ronain
+Ua Ruadacain
+Ua Ruadain
+Ua Ruadrach
+Ua Ruairc
+Ua Scannlain
+Ua Sechnasaig
+Ua Segda
+Ua Selbaig
+Ua Serraig
+Ua Sinaich
+Ua Slebene
+Ua Suairt
+Ua Suanaig
+Ua Suanaigh
+Ua Tacain
+Ua Taichlig
+Ua Taidg
+Ua Tibraide
+Ua Tigernaig
+Ua Tigernain
+Ua Tolairg
+Ua Tomaltaig
+Ua Tuathail
+Ua Tuathchair
+Uachtarthire
+Uchbad
+Ui Ailella
+Ui Ailello
+Ui Amalgada
+Ui Amalgaid
+Ui Bairrche
+Ui Bairrchi
+Ui Beccon
+Ui Birn
+Ui Bresail
+Ui Briuin
+Ui Broin
+Ui Buide
+Ui Caelluide
+Ui Cairbre
+Ui Cairbri
+Ui Cairin
+Ui Caisin
+Ui Caracain
+Ui Ceinnselaig
+Ui Ceinselaig
+Ui Cellaig
+Ui Cendselaig
+Ui Cennselaig
+Ui Cernaig
+Ui Cleirchein
+Ui Colgain
+Ui Conaill
+Ui Conaing
+Ui Conannla
+Ui Conchobair
+Ui Cormaic
+Ui Cremthain
+Ui Cremthainn
+Ui Crimthainn
+Ui Crimthannain
+Ui Crumthainn
+Ui Cuanach
+Ui Cubrain
+Ui Cuind
+Ui Cuinn
+Ui Diarmada
+Ui Donnchada
+Ui Dorthain
+Ui Drona
+Ui Duach
+Ui Dubda
+Ui Duibinnrecht
+Ui Dunain
+Ui Dunchada
+Ui Dunlaing
+Ui Eachach
+Ui Eachdach
+Ui Eathach
+Ui Echach
+Ui Eochada
+Ui Eogain
+Ui Faelain
+Ui Failge
+Ui Failgi
+Ui Feinechlais
+Ui Felmeda
+Ui Fiachrach
+Ui Fidgeinte
+Ui Fidgenti
+Ui Floinn
+Ui Focertai
+Ui Foirchellain
+Ui Forga
+Ui Forgga
+Ui Forggo
+Ui Forindain
+Ui Fothaid
+Ui Gadra
+Ui Garbain
+Ui Garchon
+Ui Gocaba
+Ui Gochaba
+Ui Labrada
+Ui Laegaire
+Ui Liathain
+Ui Lochlainn
+Ui Loclainn
+Ui Maccaille
+Ui Maeldoraid
+Ui Maelechlainn
+Ui Mail
+Ui Maine
+Ui Meith
+Ui Mictire
+Ui Muiredaig
+Ui Murchada
+Ui Neill
+Ui Niallain
+Ui Niallan
+Ui Nuallain
+Ui Segain
+Ui Segda
+Ui Suanaig
+Ui Teimne
+Ui Tortain
+Ui Trena
+Ui Tuirtre
+Ui Tuirtri
+Ulad
+Umall
+"""
+
+place = """
+Achad-aball
+Achad-bo
+Achad-bo-Cainnig
+Achad-fabair
+Achad-ur
+Aelmag
+Aenach
+Aenach-beg
+Aenach-Macha
+Aendruim
+Aes-tri-maige
+Aidirchech
+Aidne
+Ailbe
+Ailfinn
+Ailiun-da-bernach
+Aine
+Ainge
+Aird
+Airegal-Dachiarog
+Airem
+Airtech
+Airther
+Airther-maige
+Airther-Seola
+Airthera
+Alba
+Almuin
+Angaile
+Ara
+Ara-airthir
+Ara-Thire
+Ard-abla
+Ard-Brecain
+Ard-Ciannachta
+Ard-ferta-Brenainn
+Ard-Fothad
+Ard-Macha
+Ard-na-mbrec
+Ard-Oilen
+Ard-sratha
+Arda
+Ardachad
+Ardbo
+Argad-ros
+Ath-an-termoinn
+Ath-buide-Tlachtga
+Ath-Calgain
+Ath-cliath
+Ath-cliath-an-Chorainn
+Ath-Croich
+Ath-da-ferta
+Ath-duma
+Ath-Esccrach-Cuain
+Ath-feine
+Ath-Firdiad
+Ath-Goan
+Ath-innsin-Sruthra
+Ath-liag-Finn
+Ath-Luain
+Ath-Maigne
+Ath-na-dairbrige
+Ath-na-riach
+Ath-Sige
+Ath-Truira
+Bagna
+Baislec
+Balla
+Banba
+Banna
+Beg-Eire
+Beirche
+Beirre
+Bel-an-atha
+Belach-duin
+Belach-Eochaille
+Belach-Gabrain
+Belach-Guirt-an-iobair
+Benn-Edair
+Benn-Eehlabra
+Bennchair
+Beoaid
+Berba
+Bethra
+Biorra
+Blen-Gaille
+Boih-Chonais
+Boinn
+Boraime
+Bos-Ailithir
+Bos-Chomain
+Bos-Cre
+Bosses
+Both-domnaig
+Brechmag
+Bredach
+Breg-mag
+Brega
+Bregmaine
+Breifne
+Bretain
+Bridam
+Brug-na-Boinne
+Bruigin-da-choce
+Bun-Cuilinn
+Bun-Gaillme
+Cael-uisce
+Caenraige
+Caenraige-Aidne
+Caenrigi
+Caille-Follamain
+Caille-Taidbig
+Cailli
+Cairbre-Droma-chliab
+Cairbre-mor
+Cairbre-Tethba
+Cairbre-Ua-Ciarrda
+Caisel
+Callann
+Calraige-Aelmaige
+Calraige-an-Chala
+Calraige-Luirg
+Calraige-Tethba
+Caltruim
+Carman
+Carn-Conaill
+Carn-Feradaig
+Carn-Ui-Tholairg
+Carraic-Blaraige
+Carraic-Fergusa
+Cathair-Ruis
+Cenannus
+Cenn-corad
+Cenn-daire
+Cenn-Delgen
+Cenn-duin
+Cenn-Eitig
+Cenn-febrat
+Cenn-gaba
+Cenn-guba
+Cenn-lacha
+Cenn-magair
+Cenn-Rigmonaid
+Cenn-tire
+Cera
+Cianachta
+Cianachta-Glinne-Geimin
+Ciarraige-Ai
+Ciarraige-Luachra
+Cill-Achaid-Droma-foda
+Cill-air
+Cill-Ausaille
+Cill-Beneoin
+Cill-Bigsige
+Cill-Chainnig
+Cill-Cholgain
+Cill-Chorbain
+Cill-Chuilinn
+Cill-Cleithe
+Cill-Dachellog
+Cill-Dalua
+Cill-dara
+Cill-Delga
+Cill-Duibduin
+Cill-Espuig-Lonain
+Cill-fiacal
+Cill-Finnche
+Cill-Foibrig
+Cill-ingine-Baeith
+Cill-inhic-Dubain
+Cill-Ite
+Cill-Maignenn
+Cill-manach
+Cill-Mantain
+Cill-mic-Duach
+Cill-mic-Nenain
+Cill-Mochellog
+Cill-Moinne
+Cill-monai
+Cill-mor
+Cill-mor-Diothraib
+Cill-mor-Maige-Emir
+Cill-mor-Maige-Enir
+Cill-mor-Ua-Niallain
+Cill-na-gCornaire
+Cill-na-mullach
+Cill-Sanctain
+Cill-Sleibe
+Cill-Tailten
+Cill-Toma
+Cill-Ua-nDaigre
+Cinel-Aeda-na-hEchtge
+Cinel-Aengusa
+Cinel-Ardgail
+Cinel-Binnig
+Cinel-Binnig-Glinne
+Cinel-Binnig-Locha-Drochait
+Cinel-Bogaine
+Cinel-Cairbre
+Cinel-Cairbre-Cruim
+Cinel-Conaill
+Cinel-Dobtha
+Cinel-Duachain
+Cinel-Dungaile
+Cinel-Enda
+Cinel-Eogain
+Cinel-Eogain-Telcha-Og
+Cinel-Feradaig
+Cinel-Fergusa
+Cinel-Fiachach
+Cinel-Fiachrach
+Cinel-Forgo
+Cinel-Laegaire
+Cinel-Lugna
+Cinel-Luigdech
+Cinel-Mailche
+Cinel-mic-Ercca
+Cinel-Moen
+Cinel-Tuirtre
+Claenglais
+Claennad
+Claire
+Clann-Bresail
+Clann-Carthaig
+Clann-Chathail
+Clann-Chellaig
+Clann-Cholmain
+Clann-Chonchobair
+Clann-Chonnmaige
+Clann-Chosccraig
+Clann-Cregain
+Clann-Diarmada
+Clann-Dungalaig
+Clann-Fiangasa
+Clann-Fogartaig
+Clann-Maeilugra
+Clann-Maelduib
+Clann-Murchada
+Clann-Scannlain
+Clann-Sionnaig
+Clann-Tomaltaig
+Clann-Uadach
+Clanna-Neill-an-tuaisceirt
+Clere
+Cliach
+Cloch-an-Bodaig
+Cloch-Chinnfaelaid
+Clochar-mac-nDaimeine
+Cluain-aird
+Cluain-airthir
+Cluain-an-dobair
+Cluain-Boirenn
+Cluain-Bronaig
+Cluain-caein
+Cluain-Caein-Modiomog
+Cluain-Comarda
+Cluain-Conaire
+Cluain-Conmaicne
+Cluain-Crema
+Cluain-Cuifthinn
+Cluain-deochra
+Cluain-Dolcain
+Cluain-eidnech
+Cluain-eidned
+Cluain-Eois
+Cluain-ferta-Brenainn
+Cluain-ferta-Molua
+Cluain-Fiachna
+Cluain-foda-Baedain-aba
+Cluain-i
+Cluain-Iraird
+Cluain-mic-Nois
+Cluain-mor-Arda
+Cluain-mor-Maedog
+Cluain-tarb
+Cluain-Tochne
+Cluain-tuaisceirt-na-Sinna
+Cnamchoill
+Cnamross
+Cnoc-Aine
+Cnoc-Glinne-an-gabann
+Cnodba
+Cnucha
+Coba
+Coloin
+Comainn
+Comar-na-dtri-nuisge
+Comarchu
+Comraire
+Conachail
+Conaille-Muirtheimne
+Conga-Feichin
+Conmaicne
+Conmaicne-Cuile-Tolad
+Conmaicne-mara
+Connacht
+Conneire
+Contae-Chorcaige
+Corann
+Corc-achlann
+Corca-Baiscinn
+Corca-Duibne
+Corca-Firtri
+Corca-laeige
+Corca-Moga
+Corca-Raide
+Corcach
+Corcumruaid
+Craeb
+Craeb-Caille
+Craeb-Laisre
+Craeb-Telcha
+Crioch-na-gCedach
+Crioch-Rois
+Crioch-Ua-nGabla
+Criomthann
+Criomthannan
+Crogan
+Crois-sliab
+Cros-ard
+Cros-Brigde
+Cros-dorais-urdoim
+Cros-Epscoip-Etchen
+Cros-na-riag
+Cruach-Phadraig
+Cruachain
+Cruithen-tuath
+Cruithnig
+Cuailgne
+Cuailnge
+Cualann
+Cuasan
+Cuil-cael
+Cuil-Caissine
+Cuil-Cnama
+Cuil-Conaire
+Cuil-Iorra
+Cuil-Maeile
+Cuil-Moine
+Cuil-rathain
+Cuilenntrach
+Cuircne
+Cuirrech
+Cul-Dreimne
+Daball
+Daiminis
+Daimliag
+Dairbri
+Dairinis
+Dal-Araide
+Dal-bFiathach
+Dal-Buinne
+Dal-gCais
+Dal-Riada
+Danes
+Darmag
+Dartraige-Coininse
+Deilginis-Cualann
+Deisi-Breg
+Deisi-Muman
+Delbbna
+Delbna-Beg
+Delbna-Bethra
+Delbna-Mor
+Delbna-Nuadat
+Derthach-Chianain
+Desmuma
+Di-Dunchada
+Disert-Chaeimgin
+Disert-Chellaig
+Disert-da-chrioch
+Disert-Ternog
+Doailte
+Doire
+Doire-Mochonna
+Dolra-Muige-Fe
+Domnach-an-eich
+Domnach-mor-Maige-Imchlair
+Domnach-mor-mic-Laithbe
+Domnach-Padraig
+Domnach-Sechnaill
+Drobaeis
+Droichet-atha
+Droichet-Atha-Croich
+Droichet-Atha-liag
+Droichet-Atha-Luain
+Droichet-Chille-Dalua
+Droichet-na-Banna
+Droman-Ua-Casan
+Druim-Bennchair
+Druim-bo
+Druim-carad
+Druim-chliab
+Druim-Corcrain
+Druim-Cuilinn
+Druim-da-Maige
+Druim-Gregraige
+Druim-Inesclainn
+Druim-Ing
+Druim-lethan
+Druim-Mic-Ercca
+Druim-mor-Mocholmog
+Druim-ratha
+Druim-Thuama
+Dub-loch
+Dubad
+Duiblinn
+Duibthir-Atha-Luain
+Duma-Aichir
+Dun-Ailinne
+Dun-aille
+Dun-bile
+Dun-Brie
+Dun-Caildenn
+Dun-Ceithirn
+Dun-Cerbaill
+Dun-Ciaraige
+Dun-Cloitige
+Dun-Cluana-Briain
+Dun-Cuair
+Dun-da-lethglas
+Dun-Delgan
+Dun-Ethach
+Dun-Gaillme
+Dun-Genainn
+Dun-Iomgain
+Dun-Maeilin
+Dun-mic-Inguir
+Dun-mor
+Dun-Mugdorn
+Dun-na-nGall
+Dun-na-sgiath
+Dun-Rudraige
+Dun-salach
+Dun-Sgathaig
+Dunaiched
+Dunleoda
+Dunlethglais
+Dunmaeletuilc
+Duri-bolg
+Durlas
+Eba
+Echarud-Lobrain
+Echdruim
+Echtge
+Edar
+Edargabal
+Eglais-Beg
+Eiblinne
+Eigne
+Eile
+Eire
+Eithlinn
+Ella
+Emain
+Emain-Ablach
+Emain-Macha
+Enach-dub
+Enach-duin
+Eochaill
+Eoganach
+Eoganacht-Caisil
+Eoganacht-Locha-Lein
+Eos-airthir
+Eos-birn
+Eos-ech
+Eos-Guill
+Eos-mor
+Ernaide
+Es-mac-nEirc
+Es-Ruaid
+Esdara
+Falias
+Fanad
+Fathain-Mura
+Fed-duin
+Feimin
+Fella
+Fera-Arda
+Fera-Bile
+Fera-Cell
+Fera-Cualann
+Fera-Cul
+Fera-Droma
+Fera-Li
+Fera-Luirg
+Fera-Manach
+Fera-na-Craeibe
+Fera-Rois
+Fera-Tulach
+Ferann-Floinn-mic-Conaing
+Ferna
+Fernmag
+Fersad
+Fersad-Suilige
+Fert-Cerbain
+Ferta-Neimed
+Findias
+Fine-Gall
+Fiod-Conaille
+Fiod-dorcha
+Fiodnacha-Maige-Rein
+Fionna
+Fionnabair
+Fionnabair-aba
+Fionnglaise
+Fobar-Feichin
+Fochard-Muirtheimne
+Fochla
+Fodla
+Foirtrenn
+Foirtrinn
+Fordruim
+Formaeil
+Fortuatha-Laigen
+Fotharta
+Fotharta-airthir-Liffe
+Fotharta-Fe
+Frainc
+Fregabail
+Fremainn
+Gabra
+Gabra-Liffe
+Gabran
+Gaela
+Gaible
+Gailenga
+Gailenga-Collamrach
+Gailenga-Mora
+Gailinne
+Gaille
+Gaillim
+Gall
+Gall-Gaeidela
+Garbros
+Garrda-na-fionngaile
+Germainne
+Glas-charn
+Glas-Naeiden
+Glen-Rige
+Glenn-Amnach
+Glenn-Choluim-Chille
+Glenn-da-locha
+Glenn-Gaimin
+Glenn-Magair
+Glenn-Rige
+Glenn-Uissen
+Goill
+Gorias
+Granard
+Grellach-Eillte
+Grian
+Gulban-Guirt
+I-Bresail
+Imlech
+Imlech-Ech
+Imlech-isel
+Inber-Daeile
+Inber-mor
+Inis-Aingin
+Inis-bo-finne
+Inis-Caeil
+Inis-caein-Dega
+Inis-Cathaig
+Inis-Clothrann
+Inis-Cumscraig
+Inis-Doimle
+Inis-Draicrenn
+Inis-enaig
+Inis-Eobartaig
+Inis-Eogain
+Inis-Fail
+Inis-Labrada
+Inis-Lachain
+Inis-Locha-Cre
+Inis-Locha-Semdide
+Inis-mac-nErin
+Inis-mic-Conaill
+Inis-Mochta
+Inis-mor
+Inis-Muiredaig
+Inis-Padraicc
+Inis-Snaig
+Inis-Ubdain
+Inneidnen
+Innemor
+Inneoin-na-nDeisi
+Insi-Gall
+Insi-Locha-Gabor
+Insi-Mod
+Insi-na-rig
+Insi-Ui-Chuinn
+Isel-Ciarain
+Laegaire
+Laeigis
+Laigin
+Laigin-Desgabair
+Laithrech-Briuin
+Lann-Ela
+Lann-Leire
+Lann-Mic-Luachain
+Lathrach-Briuin
+Lcath-Moga
+Lec-Bladma
+Lecain
+Lee
+Leige
+Leim-an-eich
+Leire
+Leithglionn
+Leithi-cam
+Leithi-luin
+Leitir-Crancha
+Leitrech-Odrain
+Leth-Cathail
+Leth-Cuinn
+Leth-luin
+Leth-Moga
+Lethairbe
+Lethardan
+Liag-Fernae
+Liag-Hladrna
+Liath
+Liath-Manchain
+Liathmor
+Liathmuine
+Lic-Ailbe
+Life
+Linn
+Liolcach
+Lios-Aeided
+Lios-an-abbaid
+Liosmor
+Loch-Ainninn
+Loch-an-tairb
+Loch-Bethach
+Loch-Bricrenn
+Loch-Burrann
+Loch-Cal
+Loch-Calgaich
+Loch-Ce
+Loch-Cend
+Loch-Cendin
+Loch-Cimbe
+Loch-Con
+Loch-Cuan
+Loch-Dachaech
+Loch-Deirgdeirc
+Loch-Eirne
+Loch-En
+Loch-Febail
+Loch-Gabair
+Loch-Gair
+Loch-Gamna
+Loch-Garman
+Loch-Gerg
+Loch-Laegaire
+Loch-Laeig
+Loch-Lebinn
+Loch-Lein
+Loch-Muinremair
+Loch-nEthach
+Loch-Oirbsen
+Loch-Riach
+Loch-Rib
+Loch-Rudruide
+Loch-Sailech
+Loch-Sailenn
+Loch-Seimdide
+Loch-Silenn
+Loch-Suide-Odrain
+Loch-Teichet
+Loch-Ua-nGobann
+Loch-Uachtair
+Loch-Uair
+Loch-Uaithne
+Lochlann
+Lochmag
+Lothra
+Luachair
+Luachair-Degaid
+Luaigne
+Lugmag
+Luibnech
+Luige-Chonnacht
+Luigne
+Luimnech
+Lurg
+Machaihe-ardamacha
+Machaire-Cuircne
+Machaire-na-Muman
+Maein-Choluim-Chille
+Maenmag
+Maethail-Manchain
+Mag-Abna
+Mag-Adair
+Mag-Ailbe
+Mag-an-chairn
+Mag-Arcaill
+Mag-bile
+Mag-Breg
+Mag-Cedne
+Mag-Cisi
+Mag-Coba
+Mag-Conaille
+Mag-Cumma
+Mag-da-gabal
+Mag-duma
+Mag-Eein
+Mag-Eile
+Mag-Eittir-di-glais
+Mag-Ene
+Mag-eo
+Mag-Eoigne
+Mag-Feimen
+Mag-Fene
+Mag-Inis
+Mag-Ithe
+Mag-Laigen
+Mag-Lemna
+Mag-Lena
+Mag-Liffe
+Mag-line
+Mag-Lorgaig
+Mag-Luigne
+Mag-Luinge
+Mag-Luirg
+Mag-Mell
+Mag-Mide
+Mag-Mucruime
+Mag-Muirtheimne
+Mag-nAei
+Mag-nEo-nOrbraige
+Mag-Ochtair
+Mag-Seirig
+Mag-Slecht
+Mag-Techt
+Mag-Tethba
+Mag-Tuired
+Mag-Ua-mBresail
+Mag-Uatha
+Mainister-Buithe
+Mainistir-Droichit-atha
+Mainistir-na-Trionoide
+Manainn
+Mang
+Mide
+Mindroichet
+Modairn
+Moinmor
+Monaig
+Muaid
+Mucnam
+Mugdorna-Maigen
+Mugna
+Muicinis
+Muilenn-cherr
+Muilenn-Cul
+Muine-Broccain
+Muintir-Angaile
+Muintir-Chionaetha
+Muintir-Eolais
+Muintir-Fidne
+Muintir-Geradain
+Muintir-Luainim
+Muintir-Maeilfinn
+Muintir-Maeilmorda
+Muintir-Maeiltsionna
+Muintir-Scalaige
+Muintir-TIamain
+Muir-nlocht
+Mullach-sithe-Aeda
+Muma
+Mungairit
+Murbolg-Dal-Riada
+Murias
+Muscraige
+Muscraige-Breogain
+Muscraige-Chuirc
+Nas
+Ocha
+Odba
+Ogamain
+Oilech
+Oirgialla
+Ollarba
+Osraige
+Othain-mor
+Port-Lairge
+Port-rig
+Raithin
+Raithin-Ui-Suanaig
+Rath-Aeda-mic-Bric
+Rath-Aedain
+Rath-Arda-Macha
+Rath-Bacain
+Rath-beg
+Rath-Bethech
+Rath-Brenainn
+Rath-Cennaig
+Rath-Cro
+Rath-Epscoip
+Rath-Esclair
+Rath-Ettain
+Rath-Imgain
+Rath-Inbir
+Rath-Luraig
+Rath-Oenbo
+Rath-Sithe
+Rathboth
+Rechet
+Rechrainn
+Regles-Poil-agus-Petair
+Regles-Ui-Dunain
+Rig
+Rinn-duin
+Roim
+Ruaid-Beithig
+Ruba-Chonaill
+Saball-phadraig
+Saigir
+Saithne
+Samain
+Scelig-Michil
+Sciath-Nechtain
+Sciortach
+Scrin-Coluim-Cille
+Scrin-Dachonna
+Scrin-Mocholmog
+Scrin-Phadraig
+Segais
+Sid-ar-Feimin
+Sid-Boidb
+Siol-Aeda-Slaine
+Siol-Anmchada
+Siol-Cathail
+Siol-Maeilfithrig
+Siol-Maeilruanaid
+Siol-Muiredaig
+Siol-Ronain
+Sionainn
+Siuir
+Slaine
+Sleibte
+Slemain
+Sliab-Betha
+Sliab-Bladma
+Sliab-Cua
+Sliab-Cualann
+Sliab-Cuillen
+Sliab-Feimen
+Sliab-Fuaid
+Sliab-Guaire
+Sliab-Mairge
+Sliab-Mis
+Sliab-na-mBan
+Sliab-Ruad
+Sliab-Toad
+Slige-Cuailgne
+Slige-Miodluachra
+Sligech
+Smeire
+Snam-Aignech
+Sord-Choluim-Chille
+Sruthair
+Sruthair-Guaire
+Suca
+Tailltin
+Tech-Airinnan
+Tech-Choluiinchille
+Tech-Duinn
+Tech-Giograin
+Tech-Mailconog
+Tech-mo-Fionna
+Tech-Mochua
+Tech-Moling
+Tech-Munna
+Telach-Gairbeth
+Telach-Gelagain
+Telach-Mide
+Telach-Og
+Telach-Olann
+Temair
+Termann-Ciarain
+Termann-Dabeog
+Termann-Finnia
+Terrnann-Caeimgin
+Tethba
+Tiobraid-Finn
+Tir-Aeda
+Tir-Amalgaid
+Tir-da-glas
+Tir-Enda
+Tir-Fiachach
+Tir-Fiachrach-Aidne
+Tir-fo-Thuinn
+Tir-na-nOg
+Tir-Tairngire
+Tir-Tuathail
+Tirhug
+Tlachtga
+Tobar-Glethrach
+Tochar-Cluana-caein-Modiomog
+Tochar-Ethach
+Torach
+Tradraige
+Traig-Eothuile
+Traig-Li
+Treoit
+Tuag-Inber
+Tuaim
+Tuaim-da-Gualann
+Tuaim-Drecon
+Tuaim-Fionnlocha
+Tuaim-Greine
+Tuath-aesa-Greine
+Tuath-Ella
+Tuath-Luigne
+Tuath-ratha
+Tuathamrois
+Tuathmuma
+Tuidnida
+Tuilen
+Tuirbi
+Tulach
+Tulach-Breifnech
+Tulach-lias
+Tulach-Og
+Tulcainne
+Uachtar-thire
+Uaithne-Cliach
+Uaithne-tire
+Uchad
+Ui-Aithechda
+Ui-Bairrche
+Ui-Beecon
+Ui-Braccain
+Ui-Bresail-Beiri
+Ui-Briuin
+Ui-Briuin-Breifne
+Ui-Briuin-Cualann
+Ui-Briuin-na-Sinna
+Ui-Cairbre
+Ui-Caisin
+Ui-Caracain
+Ui-Ceinnsellaig
+Ui-Cellaig-Breg
+Ui-Cenneidig
+Ui-Colgain
+Ui-Conaill-Gabra
+Ui-Conannla
+Ui-Conchille
+Ui-Connachtaig
+Ui-Cormaic
+Ui-Cremthainn
+Ui-Cremthannain
+Ui-Cuanach
+Ui-Diarmada
+Ui-Drona
+Ui-Duibindrechtaig
+Ui-Eogain-Glinne
+Ui-Ethach-Coba
+Ui-Ethach-Muman
+Ui-Faelain
+Ui-Failge
+Ui-Fairchellain
+Ui-Feilmeda
+Ui-Feinechlais
+Ui-Fiachrach
+Ui-Fiachrach-Chuile-Cnama
+Ui-Fiachrach-Muirisce
+Ui-Fidgeinte
+Ui-Foirchellain
+Ui-Forannain
+Ui-Forgga
+Ui-Fothaid
+Ui-Fothaid-tire
+Ui-Gobla
+Ui-Laithen
+Ui-Liathain
+Ui-Maccaille
+Ui-Maeilhena
+Ui-Mail
+Ui-Maine-Connacht
+Ui-Mic-Uais
+Ui-Mic-Uais-Breg
+Ui-Mic-Uais-Mide
+Ui-Muiredaig
+Ui-Neill
+Ui-Niallain
+Ui-Ocra
+Ui-Oiliolla
+Ui-Olcan
+Ui-Tortain
+Ui-Trena
+Uisnech
+Ulad
+Ulaid-na-dtri-gcros
+Umall
+Urmuma
+"""

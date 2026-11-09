@@ -1,0 +1,330 @@
+# A namebook style: example names, and any settings pinned for them.
+
+title = "Hobbit"
+description = "Hobbits of the Shire and Bree in Tolkien's Middle-earth: given names and family names, from The Hobbit, The Lord of the Rings and their family trees (from Tolkien Gateway)."
+
+[settings]
+# Pinned settings, for every list. Settings left out are worked out by namebook.
+soft_consonants = false  # CH, KH, TH and the like each count as one letter
+consonant_clusters = []  # letter groups that each count as one consonant
+multi_vowels = false     # ABA, ORO and the like each count as one vowel
+letter_y = "vowel"       # vowel, consonant or semivowel
+letter_u = "vowel"       # vowel or semivowel
+letter_apostrophe = "vowel"  # vowel (the usual choice) or consonant
+structural = true        # element lengths follow the names
+statistical = true       # common elements are chosen more often
+fit_level = 3            # 0 to 3: how closely neighboring elements must fit
+prefixes = true          # the first two elements come from one name
+suffixes = true          # the last two elements come from one name
+shuffle = false          # middle elements are pooled, whatever their position
+validation_level = 2     # 0 to 2: how strictly letter limits are checked
+refuse_copies = true     # a name that is one of the names below is made again
+markov = "weighted"      # off (building rules alone), weighted or fill (a Markov chain guides the letters)
+markov_strength = 1.0    # 0 to 1: how much the Markov chain counts
+min_length = 0           # fewest letters in a name; 0 for no limit
+max_length = 0           # most letters in a name; 0 for no limit
+punctuation = []         # any of accents (AA as Á), diaeresis (Eärendil), vowel_harmony (Väinö)
+
+[settings.male]
+# Pinned for the list male alone.
+letter_hyphen = "consonant"  # consonant (the usual choice) or joint: joins two words, as a space does
+markov_order = 3  # letters the Markov chain looks back, 1 to 5; 0 to work it out
+templates = []    # recipe:weight, such as "#:3" or "5'7"; [] for none
+
+[settings.female]
+# Pinned for the list female alone.
+letter_hyphen = "consonant"  # consonant (the usual choice) or joint: joins two words, as a space does
+markov_order = 1  # letters the Markov chain looks back, 1 to 5; 0 to work it out
+templates = []    # recipe:weight, such as "#:3" or "5'7"; [] for none
+
+[settings.surname]
+# Pinned for the list surname alone.
+letter_hyphen = "joint"  # consonant (the usual choice) or joint: joins two words, as a space does
+markov_order = 2         # letters the Markov chain looks back, 1 to 5; 0 to work it out
+templates = ["#:58", "#-#:3"]  # recipe:weight, such as "#:3" or "5'7"; [] for none
+
+[names]
+male = """
+Adalbert
+Adalgar
+Adalgrim
+Adam
+Adelard
+Andwise
+Anson
+Balbo
+Bandobras
+Basso
+Berilac
+Bilbo
+Bill
+Bingo
+Blanco
+Bodo
+Bosco
+Bowman
+Briffo
+Bruno
+Bucca
+Buffo
+Bungo
+Carl
+Colombo
+Cotman
+Cottar
+Dinodas
+Doderic
+Dodinas
+Drogo
+Dudo
+Déagol
+Elfstan
+Erling
+Everard
+Falco
+Faramir
+Fastolph
+Fastred
+Ferdibrand
+Ferdinand
+Ferumbras
+Filibert
+Flambard
+Folco
+Fortinbras
+Fosco
+Fredegar
+Frodo
+Gerontius
+Gorbadoc
+Gorbulas
+Gorhendad
+Gormadoc
+Griffo
+Gruffo
+Gundabald
+Gundahad
+Gundahar
+Gundolpho
+Halfast
+Halfred
+Hamfast
+Hamson
+Harding
+Hending
+Heribald
+Herugar
+Hildibrand
+Hildifons
+Hildigrim
+Hob
+Hobson
+Holfast
+Holman
+Hugo
+Iago
+Ilberic
+Isembard
+Isembold
+Isengar
+Isengrim
+Isumbras
+Jago
+Lanorac
+Largo
+Longo
+Lotho
+Madoc
+Marcho
+Marmadas
+Marmadoc
+Marroc
+Meriadoc
+Merimac
+Merimas
+Merry
+Milo
+Minto
+Moro
+Mosco
+Mungo
+Nob
+Odo
+Odovacar
+Olo
+Orgulas
+Otho
+Otto
+Paladin
+Peregrin
+Pippin
+Polo
+Ponto
+Porto
+Posco
+Pott
+Primo
+Reginard
+Robin
+Rollo
+Rorimac
+Rudibert
+Rudigar
+Rudolph
+Rufus
+Sadoc
+Samwise
+Sancho
+Saradas
+Saradoc
+Seredic
+Sigismond
+Theobald
+Tobold
+Togo
+Tolman
+Tosto
+Uffo
+Vigo
+Wilcome
+Wilibald
+Wilimar
+Will
+Willie
+Wiseman
+"""
+
+female = """
+Adaldrida
+Adamanta
+Alfrida
+Amaranth
+Amethyst
+Angelica
+Asphodel
+Belba
+Bell
+Belladonna
+Berylla
+Camellia
+Caramella
+Celandine
+Chica
+Cora
+Daisy
+Diamond
+Dina
+Donnamira
+Dora
+Druda
+Eglantine
+Elanor
+Esmeralda
+Estella
+Fíriel
+Gerda
+Gilly
+Goldilocks
+Hanna
+Hilda
+Ivy
+Jessamine
+Lalia
+Laura
+Lavender
+Lily
+Linda
+Lobelia
+Malva
+Marigold
+May
+Melilot
+Menegilda
+Mentha
+Mimosa
+Mirabella
+Myrtle
+Nina
+Nora
+Pansy
+Pearl
+Peony
+Pervinca
+Pimpernel
+Poppy
+Primrose
+Primula
+Prisca
+Rosa
+Rosamunda
+Rose
+Rowan
+Ruby
+Salvia
+Sapphira
+Tanta
+"""
+
+surname = """
+Appledore
+Baggins
+Banks
+Boffin
+Bolger
+Bracegirdle
+Brandybuck
+Brandyfoot
+Brockhouse
+Brown
+Brownlock
+Bunce
+Burrows
+Butcher
+Butterbur
+Chubb
+Chubb-Baggins
+Clayhanger
+Cotton
+Diggle
+Fairbairn
+Ferny
+Gamgee
+Gammidge
+Gamwich
+Gardner
+Goatleaf
+Goldworthy
+Goodbody
+Goodchild
+Goodenough
+Goold
+Greenhand
+Grubb
+Hayward
+Headstrong
+Heathertoes
+Hornblower
+Lightfoot
+Longholes
+Mugwort
+Noakes
+North-took
+Oldbuck
+Pickthorn
+Proudfoot
+Puddifoot
+Roper
+Rumble
+Rushlight
+Sackville
+Sackville-Baggins
+Sandheaver
+Sandyman
+Smallburrow
+Thistlewool
+Took
+Tunnelly
+Twofoot
+Underhill
+Whitfoot
+"""

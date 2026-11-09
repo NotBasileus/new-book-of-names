@@ -1,0 +1,231 @@
+# A namebook style: example names, and any settings pinned for them.
+
+title = "Ferengi"
+description = "Ferengi men of Ferenginar, from Star Trek's series, films, novels, comics and games, without real English names (from Memory Beta)."
+
+[settings]
+# Pinned settings. Settings left out are worked out by namebook.
+soft_consonants = false  # CH, KH, TH and the like each count as one letter
+consonant_clusters = []  # letter groups that each count as one consonant
+multi_vowels = false     # ABA, ORO and the like each count as one vowel
+letter_y = "vowel"       # vowel, consonant or semivowel
+letter_u = "vowel"       # vowel or semivowel
+letter_apostrophe = "vowel"  # vowel (the usual choice) or consonant
+letter_hyphen = "consonant"  # consonant (the usual choice) or joint: joins two words, as a space does
+structural = true        # element lengths follow the names
+statistical = true       # common elements are chosen more often
+fit_level = 3            # 0 to 3: how closely neighboring elements must fit
+prefixes = true          # the first two elements come from one name
+suffixes = true          # the last two elements come from one name
+shuffle = false          # middle elements are pooled, whatever their position
+validation_level = 2     # 0 to 2: how strictly letter limits are checked
+refuse_copies = true     # a name that is one of the names below is made again
+markov = "weighted"      # off (building rules alone), weighted or fill (a Markov chain guides the letters)
+markov_order = 1         # letters the Markov chain looks back, 1 to 5; 0 to work it out
+markov_strength = 1.0    # 0 to 1: how much the Markov chain counts
+templates = []           # recipe:weight, such as "#:3" or "5'7"; [] for none
+min_length = 0           # fewest letters in a name; 0 for no limit
+max_length = 0           # most letters in a name; 0 for no limit
+punctuation = []         # any of accents (AA as Á), diaeresis (Eärendil), vowel_harmony (Väinö)
+
+[names]
+male = """
+Aramut
+Arletas
+Arno
+Bakke
+Balt
+Baun
+Bijon
+Bikk
+Bindu
+Blemin
+Blork
+Blout
+Blud
+Bok
+Bokat
+Bonge
+Borit
+Boucle
+Bractor
+Brak
+Breel
+Broc
+Brog
+Broik
+Brolok
+Brund
+Brunt
+Brusk
+Cack
+Chek
+Chig
+Chintz
+Chram
+Chudak
+Corlan
+Cort
+Dav
+Deleg
+Derro
+Dirf
+Dorl
+Drak
+Drayan
+Drek
+Drik
+Fal
+Falar
+Feg
+Flam
+Flax
+Flink
+Flus
+Flynk
+Fram
+Frek
+Frin
+Frinx
+Frool
+Gaila
+Gant
+Garjak
+Gart
+Gash
+Gek
+Geln
+Gezunt
+Gimba
+Gint
+Glat
+Glav
+Glom
+Goem
+Goff
+Gormie
+Gral
+Greb
+Grek
+Greko
+Grimp
+Grix
+Grymi
+Gubbin
+Gweemo
+Haurk
+Hecko
+Helk
+Idris
+Igel
+Iskel
+Issa
+Joq
+Kain
+Karg
+Kayron
+Kazago
+Keldar
+Kono
+Koob
+Krax
+Krechma
+Kreln
+Krem
+Kruller
+Kurga
+Lam
+Lant
+Leck
+Lenk
+Letek
+Lig
+Liph
+Logi
+Lonz
+Lorp
+Martok
+Mecko
+Meelo
+Mezzo
+Migg
+Milch
+Mirt
+Mok
+Mox
+Moxon
+Munk
+Nam
+Nava
+Neek
+Nik
+Nilva
+Nith
+Nix
+Nog
+Nurt
+Obe
+Oblat
+Oblatis
+Oblix
+Olix
+Omag
+Orax
+Orpax
+Pharh
+Plegg
+Pluboi
+Posck
+Praag
+Prak
+Promp
+Pug
+Qaris
+Quirk
+Quoop
+Rableg
+Radny
+Rata
+Rauplop
+Reyga
+Rogi
+Rom
+Schlecht
+Shmenge
+Sluggo
+Smeet
+Smoog
+Sneat
+Sner
+Solok
+Sorv
+Sovak
+Squeeb
+Squim
+Stol
+Stoonk
+Sumash
+Tarken
+Throk
+Tran
+Triv
+Trog
+Trop
+Twim
+Vastator
+Vinx
+Vock
+Vol
+Vorp
+Vung
+Vurp
+Yinkee
+Yomgro
+Yost
+Zek
+Zemel
+Zhrel
+Zind
+Zirk
+Zoid
+"""
